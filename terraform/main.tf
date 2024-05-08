@@ -11,3 +11,10 @@ resource "azurerm_static_web_app" "portfolio" {
   location            = azurerm_resource_group.portfolio-rg.location
 }
 
+# Create a Github Secret for the generated api_key
+resource "github_actions_secret" "api_key" {
+  repository      = "portfolio"
+  secret_name     = "AZURE_STATIC_WEB_APPS_API_TOKEN"
+  plaintext_value = azurerm_static_web_app.portfolio.api_key
+}
+

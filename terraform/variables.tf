@@ -17,3 +17,8 @@ variable azure_tenant_id {
   type        = string
   description = "The Azure tenant ID"
 }
+
+variable github_pat {
+  type        = string
+  description = "The GitHub personal access token"
+}
