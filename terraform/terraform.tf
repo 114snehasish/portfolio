@@ -8,6 +8,10 @@ terraform {
       source  = "integrations/github"
       version = "=6.2.1"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "=4.34.0"
+    }
   }
   backend "azurerm" {
     resource_group_name = "do-not-delete"
@@ -25,4 +29,10 @@ provider "azurerm" {
 
 provider "github" {
   token = var.github_pat
+}
+
+# Cloudflare provider
+provider "cloudflare" {
+  email   = var.cloudflare_email
+  api_key = var.cloudflare_api_key
 }

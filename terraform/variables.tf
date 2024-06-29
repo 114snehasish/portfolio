@@ -22,3 +22,16 @@ variable github_pat {
   type        = string
   description = "The GitHub personal access token"
 }
+
+variable "cloudflare_email" {
+  type        = string
+  description = "The Cloudflare email address"
+}
+variable "cloudflare_api_key" {
+  type        = string
+  description = "The Cloudflare API key"
+}
+variable "cf_zone_id" {
+  type        = string
+  description = "The Cloudflare zone ID"
+}
