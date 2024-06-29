@@ -25,3 +25,4 @@ dist-ssr
 # Ignore Enviroment variable files for local development
 setenv.bat
 setenv.sh
+/.env
