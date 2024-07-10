@@ -35,3 +35,8 @@ variable "cf_zone_id" {
   type        = string
   description = "The Cloudflare zone ID"
 }
+variable "environment" {
+  type        = string
+  description = "The environment to deploy to"
+  default     = "dev"
+}
