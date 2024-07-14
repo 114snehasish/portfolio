@@ -1,4 +1,4 @@
-name: "Create Infrastructure in ${{ github.event.inputs.environment }}"
+name: "Create Infrastructure"
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ on:
 
 jobs:
   terraform:
-    name: "create-terraform"
+    name: "create-terraform-${{ github.event.inputs.environment }}"
     runs-on: ubuntu-latest
     defaults:
       run:
