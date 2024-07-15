@@ -39,8 +39,7 @@ resource "azurerm_static_web_app_custom_domain" "portfolio" {
   count = try(1, 0)
 
   static_web_app_id = azurerm_static_web_app.portfolio.id
-  domain_name = var.environment == "prod" ? "snehasish-chakraborty.com" :
-    "portfolio-${var.environment}.snehasish-chakraborty.com"
+  domain_name = var.environment == "prod" ? "snehasish-chakraborty.com" : "portfolio-${var.environment}.snehasish-chakraborty.com"
   validation_type   = "cname-delegation"
   depends_on        = [time_sleep.wait_60_seconds]
 }
@@ -50,8 +49,7 @@ resource "azurerm_static_web_app_custom_domain" "portfolio_retry" {
   count = try(0, 1)
 
   static_web_app_id = azurerm_static_web_app.portfolio.id
-  domain_name = var.environment == "prod" ? "snehasish-chakraborty.com" :
-    "portfolio-${var.environment}.snehasish-chakraborty.com"
+  domain_name = var.environment == "prod" ? "snehasish-chakraborty.com" : "portfolio-${var.environment}.snehasish-chakraborty.com"
   validation_type   = "cname-delegation"
   depends_on        = [azurerm_static_web_app_custom_domain.portfolio]
 }
