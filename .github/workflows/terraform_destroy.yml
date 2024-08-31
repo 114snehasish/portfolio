@@ -1,11 +1,22 @@
 name: "Destroy Infrastructure"
+run-name: "Destroy Infrastructure in ${{ github.event.inputs.environment }}"
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment Environment'
+        required: false
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - stg
+          - prod
 
 jobs:
   terraform:
-    name: "destroy-terraform"
+    name: "destroy-terraform-${{ github.event.inputs.environment }}"
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -15,6 +26,7 @@ jobs:
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      TFVARS: ${{ secrets.TFVARS }}
 
     steps:
       - name: Checkout
@@ -29,13 +41,15 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
-        run: terraform -chdir=terraform init -backend-config="resource_group_name=${{ secrets.RESOURCE_GROUP_NAME }}" -backend-config="storage_account_name=${{ secrets.STORAGE_ACCOUNT_NAME }}" -backend-config="container_name=tfstate" -backend-config="key=listen-${{ secrets.TF_STATE_FILE }}.tfstate"
+        run: |
+          echo -e $TFVARS > terraform/terraform.tfvars
+          terraform -chdir=terraform init -backend-config="resource_group_name=${{ secrets.RESOURCE_GROUP_NAME }}" -backend-config="storage_account_name=${{ secrets.STORAGE_ACCOUNT_NAME }}" -backend-config="container_name=tfstate" -backend-config="key=listen-${{ secrets.TF_STATE_FILE }}-${{ github.event.inputs.environment }}.tfstate"
       - name: Terraform Validate
         run: terraform -chdir=terraform validate
 
       - name: Terraform Plan
-        run: terraform -chdir=terraform plan -destroy -input=false -var="spn_client_id=${{ secrets.AZURE_CLIENT_ID }}" -var="spn_client_secret=${{ secrets.AZURE_CLIENT_SECRET }}" -var="azure_tenant_id=${{ secrets.AZURE_TENANT_ID }}" -var="azure_subscription_id=${{ secrets.AZURE_SUBSCRIPTION_ID }}" -var="github_pat=${{ secrets.GH_PAT }}"
+        run: terraform -chdir=terraform plan -destroy -input=false -var="environment=${{ github.event.inputs.environment }}"
 
       - name: Terraform Apply
-        run: terraform -chdir=terraform apply -destroy -input=false -var="spn_client_id=${{ secrets.AZURE_CLIENT_ID }}" -var="spn_client_secret=${{ secrets.AZURE_CLIENT_SECRET }}" -var="azure_tenant_id=${{ secrets.AZURE_TENANT_ID }}" -var="azure_subscription_id=${{ secrets.AZURE_SUBSCRIPTION_ID }}" -var="github_pat=${{ secrets.GH_PAT }}" -input=false -auto-approve
+        run: terraform -chdir=terraform apply -destroy -input=false -auto-approve -var="environment=${{ github.event.inputs.environment }}"
 
