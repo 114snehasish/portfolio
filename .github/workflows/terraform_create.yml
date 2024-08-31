@@ -1,4 +1,5 @@
 name: "Create Infrastructure"
+run-name: "Create Infrastructure in ${{ github.event.inputs.environment }}"
 
 on:
   workflow_dispatch:
@@ -48,8 +49,8 @@ jobs:
         run: terraform -chdir=terraform validate
 
       - name: Terraform Plan
-        run: terraform -chdir=terraform plan -input=false
+        run: terraform -chdir=terraform plan -input=false -var="environment=${{ github.event.inputs.environment }}"
 
       - name: Terraform Apply
-        run: terraform -chdir=terraform apply -input=false -auto-approve
+        run: terraform -chdir=terraform apply -input=false -auto-approve -var="environment=${{ github.event.inputs.environment }}"
 
