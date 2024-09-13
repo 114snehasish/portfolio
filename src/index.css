@@ -1,3 +1,17 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/*Variables*/
+:root {
+  --background-color: #0a192f;
+  --secondary-color: #37e784;
+  --font-size-base: 16px;
+  --spacing-unit: 8px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-size: var(--font-size-base);
+  font-family: 'Fira Code', monospace;
+}
