@@ -24,3 +24,15 @@ body {
   color: var(--secondary-color);
   transition: color 0.5s;
 }
+
+.button {
+  @apply p-button-padding pl-5 pr-5 border rounded border-solid border-secondary
+  bg-transparent text-secondary cursor-pointer;
+}
+
+.cta-button {
+  @apply button hover:bg-secondary hover:text-white;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+}
