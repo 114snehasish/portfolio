@@ -14,9 +14,9 @@ export default function Header() {
   ];
   const renderLink = (item: NavItem, index: number) => {
     return (
-      <a key={item.href} href={item.href}>
-        <span className="accent-text">{index + 1}. </span>
-        <span className="accent-on-hover">{item.label}</span>
+      <a className="header-text" key={item.href} href={item.href}>
+        <span>{index + 1}. </span>
+        <span>{item.label}</span>
       </a>
     );
   };
