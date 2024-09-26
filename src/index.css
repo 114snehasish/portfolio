@@ -8,6 +8,7 @@
   --secondary-color: #37e784;
   --font-size-base: 16px;
   --spacing-unit: 8px;
+  --transition-time: 0.3s;
 }
 
 body {
@@ -16,13 +17,17 @@ body {
   font-family: 'Fira Code', monospace;
 }
 
-.accent-text {
+.header-text {
+  transition: color var(--transition-time);
+}
+
+.header-text span:first-child {
+  @apply font-bold;
   color: var(--secondary-color);
 }
 
-.accent-on-hover:hover {
+.header-text:hover {
   color: var(--secondary-color);
-  transition: color 0.5s;
 }
 
 .button {
@@ -31,8 +36,8 @@ body {
 }
 
 .cta-button {
-  @apply button hover:bg-secondary hover:text-white;
+  @apply button hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-cta;
   transition:
-    background-color 0.5s,
-    color 0.5s;
+    box-shadow var(--transition-time),
+    transform var(--transition-time);
 }

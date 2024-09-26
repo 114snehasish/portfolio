@@ -12,13 +12,8 @@ export default {
       colors: {
         secondary: 'var(--secondary-color)',
       },
-      animation: {
-        shine: 'shine 1s',
-      },
-      keyframes: {
-        shine: {
-          '100%': { left: '125%' },
-        },
+      boxShadow: {
+        cta: '4px 4px 0 0 var(--secondary-color)',
       },
     },
   },
