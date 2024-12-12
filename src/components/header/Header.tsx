@@ -1,3 +1,5 @@
+import './header.css';
+
 interface NavItem {
   href: string;
   label: string;

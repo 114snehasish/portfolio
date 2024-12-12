@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors.js';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -11,9 +13,13 @@ export default {
       },
       colors: {
         secondary: 'var(--secondary-color)',
+        content: colors.gray[300],
       },
       boxShadow: {
         cta: '4px 4px 0 0 var(--secondary-color)',
+      },
+      fontFamily: {
+        'fira-code': ['Fira Code', 'monospace'],
       },
     },
   },

@@ -14,20 +14,7 @@
 body {
   background-color: var(--background-color);
   font-size: var(--font-size-base);
-  font-family: 'Fira Code', monospace;
-}
-
-.header-text {
-  transition: color var(--transition-time);
-}
-
-.header-text span:first-child {
-  @apply font-bold;
-  color: var(--secondary-color);
-}
-
-.header-text:hover {
-  color: var(--secondary-color);
+  @apply text-content font-fira-code;
 }
 
 .button {
