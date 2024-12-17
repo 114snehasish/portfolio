@@ -1,3 +1,5 @@
+import './header.css';
+
 interface NavItem {
   href: string;
   label: string;
@@ -33,7 +35,7 @@ export default function Header() {
   };
 
   return (
-    <header className="text-gray-300 p-8">
+    <header className="p-8">
       <nav className="flex justify-end items-center space-x-8">
         {navItems.map((item, index) =>
           item.type === 'link' ? renderLink(item, index) : renderButton(item)

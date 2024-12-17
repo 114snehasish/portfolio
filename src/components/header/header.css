@@ -1,0 +1,12 @@
+.header-text {
+  transition: color var(--transition-time);
+}
+
+.header-text span:first-child {
+  @apply font-bold;
+  color: var(--secondary-color);
+}
+
+.header-text:hover {
+  color: var(--secondary-color);
+}
