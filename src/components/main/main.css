@@ -3,5 +3,15 @@
 }
 
 .main-section {
-  @apply flex flex-col items-center justify-center min-h-screen;
+  @apply flex flex-col items-start justify-center min-h-screen my-0 mx-auto w-[80%];
+}
+
+.big-text {
+  font-family: 'Poppins', serif;
+  font-size: clamp(40px, 8vw, 80px);
+  @apply font-bold;
+}
+
+.big-text > .caption {
+  @apply text-gray-400;
 }
