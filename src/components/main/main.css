@@ -15,3 +15,11 @@
 .big-text > .caption {
   @apply text-caption;
 }
+
+.self-description {
+  @apply text-lg font-medium text-content mt-4 lg:max-w-2xl sm:max-w-[100%];
+}
+
+#cta-button-main {
+  @apply px-7 py-4;
+}
