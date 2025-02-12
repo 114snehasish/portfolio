@@ -30,6 +30,9 @@ const Main = () => {
           technologies. I have been into serving clients from different business
           domains such as Pharma, Banking and Travel.
         </p>
+        <button className="cta-button mt-4" id="cta-button-main">
+          $ more_about_me &gt;_
+        </button>
       </section>
     </main>
   );
