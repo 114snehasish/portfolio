@@ -26,3 +26,4 @@ dist-ssr
 setenv.bat
 setenv.sh
 /.env
+/.scannerwork/
