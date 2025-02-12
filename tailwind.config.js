@@ -11,7 +11,8 @@ export default {
       },
       colors: {
         secondary: 'var(--secondary-color)',
-        content: 'var(--text-color)',
+        'content-default': 'var(--text-color)',
+        content: 'var(--content-color)',
         caption: 'var(--caption-color)',
       },
       boxShadow: {

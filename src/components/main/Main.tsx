@@ -1,6 +1,7 @@
 import './main.css';
 
 const Main = () => {
+  const yearsOfExperience = getYearsOfExperience();
   return (
     <main className="main">
       <section className="main-section">
@@ -11,11 +12,33 @@ const Main = () => {
           <h1>Snehasish Chakraborty.</h1>
           <h1 className="caption">I help team build products for the web.</h1>
         </div>
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p className="self-description">
+          I am a software engineer having{' '}
+          <span className="text-secondary">{yearsOfExperience}</span> years of
+          experience specializing in{' '}
+          <span className="text-secondary">Spring Boot</span>,{' '}
+          <span className="text-secondary">Angular</span> and{' '}
+          <span className="text-secondary">Azure</span>. I also have experience
+          in different DevOps technologies like{' '}
+          <span className="text-secondary">GitHub Actions</span>,{' '}
+          <span className="text-secondary">Docker</span>,{' '}
+          <span className="text-secondary">Terraform</span> etc. I have also
+          past experience in multiple{' '}
+          <span className="text-secondary">AWS</span> services along with{' '}
+          <span className="text-secondary">Documentum,</span>{' '}
+          <span className="text-secondary">D2</span> and related ECM
+          technologies. I have been into serving clients from different business
+          domains such as Pharma, Banking and Travel.
+        </p>
       </section>
     </main>
   );
 };
+
+function getYearsOfExperience() {
+  const startYear = 2016;
+  const currentYear = new Date().getFullYear();
+  return currentYear - startYear;
+}
 
 export default Main;

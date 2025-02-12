@@ -7,12 +7,12 @@ interface NavItem {
 }
 export default function Header() {
   const navItems: NavItem[] = [
-    { href: '#about', label: 'about', type: 'link' },
-    { href: '#skills', label: 'skills', type: 'link' },
-    { href: '#experiences', label: 'experiences', type: 'link' },
-    { href: '#article', label: 'articles', type: 'link' },
-    { href: '#contact', label: 'contact', type: 'link' },
-    { href: '/resume.pdf', label: 'resume', type: 'button' },
+    { href: '#about', label: '_about', type: 'link' },
+    { href: '#skills', label: '_skills', type: 'link' },
+    { href: '#experiences', label: '_experiences', type: 'link' },
+    { href: '#article', label: '_articles', type: 'link' },
+    { href: '#contact', label: '_contact', type: 'link' },
+    { href: '/resume.pdf', label: '/resume', type: 'button' },
   ];
   const renderLink = (item: NavItem, index: number) => {
     return (
