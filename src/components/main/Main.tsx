@@ -16,19 +16,16 @@ const Main = () => {
           I am a software engineer having{' '}
           <span className="text-secondary">{yearsOfExperience}</span> years of
           experience specializing in{' '}
-          <span className="text-secondary">Spring Boot</span>,{' '}
-          <span className="text-secondary">Angular</span> and{' '}
-          <span className="text-secondary">Azure</span>. I also have experience
-          in different DevOps technologies like{' '}
-          <span className="text-secondary">GitHub Actions</span>,{' '}
-          <span className="text-secondary">Docker</span>,{' '}
-          <span className="text-secondary">Terraform</span> etc. I have also
-          past experience in multiple{' '}
-          <span className="text-secondary">AWS</span> services along with{' '}
-          <span className="text-secondary">Documentum,</span>{' '}
-          <span className="text-secondary">D2</span> and related ECM
-          technologies. I have been into serving clients from different business
-          domains such as Pharma, Banking and Travel.
+          <span className="text-secondary">Full Stack</span>,{' '}
+          <span className="text-secondary">Cloud</span> and{' '}
+          <span className="text-secondary">DevOps</span>. I also have experience
+          in different ECM Technologies like{' '}
+          <span className="text-secondary">Documentum</span> and{' '}
+          <span className="text-secondary">D2</span>. I have been into serving
+          clients from different business domains such as{' '}
+          <span className="text-secondary">Pharma</span>,{' '}
+          <span className="text-secondary">Travel</span> and{' '}
+          <span className="text-secondary">Banking</span>.
         </p>
         <button className="cta-button mt-4" id="cta-button-main">
           $ more_about_me &gt;_
