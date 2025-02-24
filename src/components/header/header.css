@@ -1,12 +1,26 @@
+.nav {
+  @apply flex md:justify-end sm:justify-around items-center space-x-8;
+}
+
 .header-text {
   transition: color var(--transition-time);
 }
 
-.header-text span:first-child {
+.header-text:hover {
+  @apply cursor-pointer;
+  color: var(--secondary-color);
+}
+
+.header-text-desktop {
+  @apply hidden md:block;
+}
+
+.header-text-desktop span:first-child {
   @apply font-bold;
   color: var(--secondary-color);
 }
 
-.header-text:hover {
-  color: var(--secondary-color);
+.header-text-mobile {
+  @apply flex md:hidden;
+  transition: color var(--transition-time);
 }
