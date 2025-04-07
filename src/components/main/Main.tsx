@@ -1,7 +1,12 @@
 import './main.css';
 
-const Main = () => {
+interface MainProps {
+  scrollToAbout: () => void;
+}
+
+const Main = ({ scrollToAbout }: MainProps) => {
   const yearsOfExperience = getYearsOfExperience();
+  
   return (
     <main className="main">
       <section className="main-section">
@@ -27,7 +32,11 @@ const Main = () => {
           <span className="text-secondary">Travel</span> and{' '}
           <span className="text-secondary">Banking</span>.
         </p>
-        <button className="cta-button mt-4" id="cta-button-main">
+        <button 
+          className="cta-button mt-4" 
+          id="cta-button-main"
+          onClick={scrollToAbout}
+        >
           $ more_about_me &gt;_
         </button>
       </section>
