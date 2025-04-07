@@ -14,6 +14,7 @@ export default {
         'content-default': 'var(--text-color)',
         content: 'var(--content-color)',
         caption: 'var(--caption-color)',
+        background: 'var(--background-color)',
       },
       boxShadow: {
         cta: '4px 4px 0 0 var(--secondary-color)',
