@@ -1,16 +1,8 @@
 import './main.css';
-import { RefObject } from 'react';
+import { Link } from 'react-scroll';
 
-interface MainProps {
-  aboutRef: RefObject<HTMLDivElement>;
-}
-
-const Main = ({ aboutRef }: MainProps) => {
+const Main = () => {
   const yearsOfExperience = getYearsOfExperience();
-  
-  const scrollToAbout = () => {
-    aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
   
   return (
     <main className="main">
@@ -37,13 +29,17 @@ const Main = ({ aboutRef }: MainProps) => {
           <span className="text-secondary">Travel</span> and{' '}
           <span className="text-secondary">Banking</span>.
         </p>
-        <button 
-          className="cta-button mt-4" 
+        <Link 
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="cta-button mt-4 inline-block cursor-pointer" 
           id="cta-button-main"
-          onClick={scrollToAbout}
         >
           $ more_about_me &gt;_
-        </button>
+        </Link>
       </section>
     </main>
   );

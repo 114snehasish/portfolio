@@ -1,9 +1,9 @@
 import './about.css';
-import { forwardRef } from 'react';
+import { Element } from 'react-scroll';
 
-const About = forwardRef<HTMLElement, {}>((_, ref) => {
+const About = () => {
   return (
-    <section ref={ref} id="about" className="about-section">
+    <Element name="about" className="about-section">
       <h2 className="about-title">About Me</h2>
       
       <div className="about-content">
@@ -38,10 +38,8 @@ const About = forwardRef<HTMLElement, {}>((_, ref) => {
           </div>
         </div>
       </div>
-    </section>
+    </Element>
   );
-});
-
-About.displayName = 'About';
+};
 
 export default About; 
