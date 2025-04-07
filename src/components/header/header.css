@@ -6,8 +6,9 @@ header {
   @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background-transparent;
 }
 
+/* Base styles for all header text items with transitions */
 .header-text {
-  @apply text-sm md:text-base transition-colors duration-300;
+  @apply text-sm md:text-base transition-colors duration-300 ease-in-out;
 }
 
 .header-text:hover {
@@ -18,12 +19,16 @@ header {
   @apply hidden lg:inline-flex items-center gap-2;
 }
 
+.header-text-desktop span {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
 .header-text-desktop span:first-child {
   @apply font-bold text-secondary;
 }
 
 .header-text-mobile {
-  @apply flex lg:hidden items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 transition-colors duration-300;
+  @apply flex lg:hidden items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 transition-colors duration-300 ease-in-out;
 }
 
 .header-text-mobile:hover {
@@ -31,7 +36,13 @@ header {
 }
 
 .header-text-mobile span {
-  @apply text-lg sm:text-base md:text-lg;
+  @apply text-lg sm:text-base md:text-lg transition-colors duration-300 ease-in-out;
+}
+
+/* react-scroll applies the 'active' class to the Link component */
+.nav-item .active span:last-child,
+.nav-item .active {
+  @apply text-secondary transition-colors duration-300 ease-in-out;
 }
 
 .nav-item {
@@ -58,13 +69,5 @@ header {
 }
 
 .cta-button:hover {
-  @apply text-secondary;
-}
-
-.nav-item.active .header-text-desktop span:last-child {
-  @apply text-secondary;
-}
-
-.nav-item.active .header-text-mobile {
   @apply text-secondary;
 }

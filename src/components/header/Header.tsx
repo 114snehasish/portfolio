@@ -6,69 +6,28 @@ import { FaNewspaper } from 'react-icons/fa6';
 import { FaEnvelope } from 'react-icons/fa6';
 import { FaFile } from 'react-icons/fa6';
 import { IconType } from 'react-icons';
-import { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 interface NavItem {
-  href: string;
+  to: string;
   label: string;
   type: 'link' | 'button';
   icon: IconType;
 }
 
 interface HeaderProps {
-  scrollToAbout: () => void;
+  // No need for scrollToAbout function or sectionRefs with react-scroll
 }
 
-export default function Header({ scrollToAbout }: HeaderProps) {
-  const [activeSection, setActiveSection] = useState<string>('');
-
-  useEffect(() => {
-    const sections = ['about', 'skills', 'experiences', 'article', 'contact'].map(
-      id => document.getElementById(id)
-    ).filter(Boolean);
-
-    if (sections.length === 0) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px', // Adjust this to control when sections are considered "active"
-      threshold: 0.1
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
-    sections.forEach(section => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach(section => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, []);
-
+export default function Header({}: HeaderProps) {
   const navItems: NavItem[] = [
-    { href: '#about', label: '_about', type: 'link', icon: FaUser },
-    { href: '#skills', label: '_skills', type: 'link', icon: FaCode },
+    { to: 'about', label: '_about', type: 'link', icon: FaUser },
+    { to: 'skills', label: '_skills', type: 'link', icon: FaCode },
+    { to: 'experiences', label: '_experiences', type: 'link', icon: FaBriefcase },
+    { to: 'article', label: '_articles', type: 'link', icon: FaNewspaper },
+    { to: 'contact', label: '_contact', type: 'link', icon: FaEnvelope },
     {
-      href: '#experiences',
-      label: '_experiences',
-      type: 'link',
-      icon: FaBriefcase,
-    },
-    { href: '#article', label: '_articles', type: 'link', icon: FaNewspaper },
-    { href: '#contact', label: '_contact', type: 'link', icon: FaEnvelope },
-    {
-      href: '/resume.pdf',
+      to: '/resume.pdf', // This needs special handling as it's not a scroll target
       label: '/resume',
       type: 'button',
       icon: FaFile,
@@ -76,57 +35,48 @@ export default function Header({ scrollToAbout }: HeaderProps) {
   ];
 
   const renderLink = (item: NavItem, index: number) => {
-    const isActive = activeSection === item.href.substring(1);
-    
-    if (item.href === '#about') {
+    if (item.type === 'link') {
       return (
-        <div className={`nav-item ${isActive ? 'active' : ''}`} key={item.href}>
-          <a 
-            onClick={(e) => { 
-              e.preventDefault(); 
-              scrollToAbout(); 
-            }} 
+        <div className="nav-item" key={item.to}>
+          {/* Desktop view */}
+          <Link
+            to={item.to}
+            spy={true}
+            smooth={true}
+            offset={-100} // Adjust if your header height changes
+            duration={500}
+            activeClass="active"
             className="header-text header-text-desktop"
           >
             <span>{index + 1}. </span>
             <span>{item.label}</span>
-          </a>
-          <a 
-            onClick={(e) => { 
-              e.preventDefault(); 
-              scrollToAbout(); 
-            }} 
+          </Link>
+          
+          {/* Mobile view */}
+          <Link
+            to={item.to}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
             className="header-text header-text-mobile"
           >
             <span>
               <item.icon />
             </span>
-          </a>
+          </Link>
           <span className="nav-tooltip">{item.label}</span>
         </div>
       );
     }
-    
-    return (
-      <div className={`nav-item ${isActive ? 'active' : ''}`} key={item.href}>
-        <a href={item.href} className="header-text header-text-desktop">
-          <span>{index + 1}. </span>
-          <span>{item.label}</span>
-        </a>
-        <a href={item.href} className="header-text header-text-mobile">
-          <span>
-            <item.icon />
-          </span>
-        </a>
-        <span className="nav-tooltip">{item.label}</span>
-      </div>
-    );
+    return null;
   };
 
   const renderButton = (item: NavItem) => {
     return (
-      <div className="nav-item" key={item.href}>
-        <button className="cta-button" onClick={() => window.location.href = item.href}>
+      <div className="nav-item" key={item.to}>
+        <button className="cta-button" onClick={() => window.location.href = item.to}>
           <span>{item.label}</span>
           <item.icon />
         </button>
