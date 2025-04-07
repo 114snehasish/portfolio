@@ -14,7 +14,11 @@ interface NavItem {
   icon: IconType;
 }
 
-export default function Header() {
+interface HeaderProps {
+  scrollToAbout: () => void;
+}
+
+export default function Header({ scrollToAbout }: HeaderProps) {
   const navItems: NavItem[] = [
     { href: '#about', label: '_about', type: 'link', icon: FaUser },
     { href: '#skills', label: '_skills', type: 'link', icon: FaCode },
@@ -35,6 +39,35 @@ export default function Header() {
   ];
 
   const renderLink = (item: NavItem, index: number) => {
+    if (item.href === '#about') {
+      return (
+        <div className="nav-item" key={item.href}>
+          <a 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              scrollToAbout(); 
+            }} 
+            className="header-text header-text-desktop"
+          >
+            <span>{index + 1}. </span>
+            <span>{item.label}</span>
+          </a>
+          <a 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              scrollToAbout(); 
+            }} 
+            className="header-text header-text-mobile"
+          >
+            <span>
+              <item.icon />
+            </span>
+          </a>
+          <span className="nav-tooltip">{item.label}</span>
+        </div>
+      );
+    }
+    
     return (
       <div className="nav-item" key={item.href}>
         <a href={item.href} className="header-text header-text-desktop">
