@@ -1,26 +1,58 @@
 .nav {
-  @apply flex md:justify-end sm:justify-around items-center space-x-8;
+  @apply flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 justify-around md:justify-end;
 }
 
 .header-text {
-  transition: color var(--transition-time);
+  @apply text-sm md:text-base transition-colors duration-300;
 }
 
 .header-text:hover {
-  @apply cursor-pointer;
-  color: var(--secondary-color);
+  @apply cursor-pointer text-secondary;
 }
 
 .header-text-desktop {
-  @apply hidden md:block;
+  @apply hidden lg:inline-flex items-center gap-2;
 }
 
 .header-text-desktop span:first-child {
-  @apply font-bold;
-  color: var(--secondary-color);
+  @apply font-bold text-secondary;
 }
 
 .header-text-mobile {
-  @apply flex md:hidden;
-  transition: color var(--transition-time);
+  @apply flex lg:hidden items-center justify-center w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300;
+}
+
+.header-text-mobile:hover {
+  @apply text-secondary;
+}
+
+.header-text-mobile span {
+  @apply text-lg;
+}
+
+.nav-item {
+  @apply relative;
+}
+
+.nav-tooltip {
+  @apply absolute -bottom-8 left-1/2 transform -translate-x-1/2 
+         text-xs bg-secondary text-black px-2 py-1 rounded
+         opacity-0 pointer-events-none lg:hidden transition-opacity duration-300;
+}
+
+.header-text-mobile:hover + .nav-tooltip {
+  @apply opacity-100;
+}
+
+.cta-button {
+  @apply text-xs sm:text-sm md:text-base flex items-center justify-center
+         px-2 sm:px-3 md:px-4 py-1 md:py-2 transition-colors duration-300;
+}
+
+.cta-button span {
+  @apply inline mr-2;
+}
+
+.cta-button:hover {
+  @apply text-secondary;
 }
