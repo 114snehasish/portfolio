@@ -1,11 +1,16 @@
 import './main.css';
+import { RefObject } from 'react';
 
 interface MainProps {
-  scrollToAbout: () => void;
+  aboutRef: RefObject<HTMLDivElement>;
 }
 
-const Main = ({ scrollToAbout }: MainProps) => {
+const Main = ({ aboutRef }: MainProps) => {
   const yearsOfExperience = getYearsOfExperience();
+  
+  const scrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   
   return (
     <main className="main">

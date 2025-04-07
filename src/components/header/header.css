@@ -2,6 +2,10 @@
   @apply flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 justify-around md:justify-end;
 }
 
+header {
+  @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background-transparent;
+}
+
 .header-text {
   @apply text-sm md:text-base transition-colors duration-300;
 }
@@ -19,7 +23,7 @@
 }
 
 .header-text-mobile {
-  @apply flex lg:hidden items-center justify-center w-8 h-8 sm:w-10 sm:h-10 transition-colors duration-300;
+  @apply flex lg:hidden items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 transition-colors duration-300;
 }
 
 .header-text-mobile:hover {
@@ -27,7 +31,7 @@
 }
 
 .header-text-mobile span {
-  @apply text-lg;
+  @apply text-lg sm:text-base md:text-lg;
 }
 
 .nav-item {
@@ -54,5 +58,13 @@
 }
 
 .cta-button:hover {
+  @apply text-secondary;
+}
+
+.nav-item.active .header-text-desktop span:last-child {
+  @apply text-secondary;
+}
+
+.nav-item.active .header-text-mobile {
   @apply text-secondary;
 }

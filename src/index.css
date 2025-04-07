@@ -6,6 +6,7 @@
 /*Variables*/
 :root {
   --background-color: #0a192f;
+  --background-transparent: rgba(10, 25, 47, 0.75);
   --secondary-color: #37e784;
   --text-color: #ccd6f6;
   --font-size-base: 16px;
