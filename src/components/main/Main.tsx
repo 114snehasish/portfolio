@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const Main = () => {
   const yearsOfExperience = getYearsOfExperience();
-  
+
   return (
     <main className="main">
       <section className="main-section">
@@ -21,8 +21,8 @@ const Main = () => {
             experience specializing in{' '}
             <span className="text-secondary">Full Stack</span>,{' '}
             <span className="text-secondary">Cloud</span> and{' '}
-            <span className="text-secondary">DevOps</span>. I also have experience
-            in different ECM Technologies like{' '}
+            <span className="text-secondary">DevOps</span>. I also have
+            experience in different ECM Technologies like{' '}
             <span className="text-secondary">Documentum</span> and{' '}
             <span className="text-secondary">D2</span>. I have been into serving
             clients from different business domains such as{' '}
@@ -30,13 +30,13 @@ const Main = () => {
             <span className="text-secondary">Travel</span> and{' '}
             <span className="text-secondary">Banking</span>.
           </p>
-          <Link 
+          <Link
             to="about"
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
-            className="cta-button mt-4 inline-block cursor-pointer" 
+            className="cta-button mt-4 inline-block cursor-pointer"
             id="cta-button-main"
           >
             $ more_about_me &gt;_
