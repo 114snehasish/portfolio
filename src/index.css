@@ -33,3 +33,8 @@ body {
     box-shadow var(--transition-time),
     transform var(--transition-time);
 }
+
+/* Global section container for consistent margins */
+.section-container {
+  @apply w-[90%] mx-auto px-0 sm:px-16 md:px-24 lg:px-32 xl:px-40;
+}

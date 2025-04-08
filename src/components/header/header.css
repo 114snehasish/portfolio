@@ -59,6 +59,10 @@ header {
   @apply opacity-100;
 }
 
+.header-text-mobile.active + .nav-tooltip {
+  @apply opacity-100;
+}
+
 .cta-button {
   @apply text-xs sm:text-sm md:text-base flex items-center justify-center
          px-2 sm:px-3 md:px-4 py-1 md:py-2 transition-colors duration-300;
