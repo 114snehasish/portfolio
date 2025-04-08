@@ -38,5 +38,5 @@ body {
 
 /* Global section container for consistent margins */
 .section-container {
-  @apply w-[80%] mx-auto px-0 sm:px-16 md:px-24 lg:px-32 xl:px-40;
+  @apply w-[85%] mx-auto px-0 sm:px-16 md:px-24 lg:px-32 xl:px-40;
 }

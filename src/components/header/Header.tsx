@@ -23,7 +23,12 @@ export default function Header({}: HeaderProps) {
   const navItems: NavItem[] = [
     { to: 'about', label: '_about', type: 'link', icon: FaUser },
     { to: 'skills', label: '_skills', type: 'link', icon: FaCode },
-    { to: 'experiences', label: '_experiences', type: 'link', icon: FaBriefcase },
+    {
+      to: 'experiences',
+      label: '_experiences',
+      type: 'link',
+      icon: FaBriefcase,
+    },
     { to: 'article', label: '_articles', type: 'link', icon: FaNewspaper },
     { to: 'contact', label: '_contact', type: 'link', icon: FaEnvelope },
     {
@@ -51,7 +56,7 @@ export default function Header({}: HeaderProps) {
             <span>{index + 1}. </span>
             <span>{item.label}</span>
           </Link>
-          
+
           {/* Mobile view */}
           <Link
             to={item.to}
@@ -76,7 +81,10 @@ export default function Header({}: HeaderProps) {
   const renderButton = (item: NavItem) => {
     return (
       <div className="nav-item" key={item.to}>
-        <button className="cta-button" onClick={() => window.location.href = item.to}>
+        <button
+          className="cta-button"
+          onClick={() => (window.location.href = item.to)}
+        >
           <span>{item.label}</span>
           <item.icon />
         </button>
