@@ -39,7 +39,7 @@
 }
 
 .image-container:hover .profile-image {
-  @apply translate-x-[-4px] translate-y-[-4px] shadow-cta;
+  @apply scale-105;
 }
 
 .image-container:hover .image-overlay {
