@@ -1,14 +1,52 @@
 .about-section {
-  @apply flex flex-col items-start justify-center min-h-screen py-16;
+  @apply py-16 bg-primary;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-4;
 }
 
 .about-title {
-  @apply text-2xl md:text-3xl font-bold text-secondary mb-6;
+  @apply text-2xl font-bold mb-8 text-left text-secondary;
 }
 
 .about-content {
-  @apply text-base md:text-lg text-content max-w-3xl;
+  @apply flex flex-col gap-8 items-center md:flex-row md:justify-center md:items-start md:gap-12;
 }
+
+.about-text {
+  @apply flex-1 max-w-2xl md:text-left;
+}
+
+.about-text p {
+  @apply text-lg leading-relaxed text-gray-300;
+}
+
+.about-image {
+  @apply w-full max-w-md;
+}
+
+.image-container {
+  @apply relative overflow-hidden rounded-lg cursor-pointer;
+}
+
+.profile-image {
+  @apply w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out;
+}
+
+.image-overlay {
+  @apply absolute inset-0 bg-secondary opacity-0 transition-opacity duration-300 ease-in-out;
+}
+
+.image-container:hover .profile-image {
+  @apply translate-x-[-4px] translate-y-[-4px] shadow-cta;
+}
+
+.image-container:hover .image-overlay {
+  @apply opacity-20;
+}
+
+/* Responsive layout is now handled by Tailwind prefixes */
 
 .about-grid {
   @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 w-full;
