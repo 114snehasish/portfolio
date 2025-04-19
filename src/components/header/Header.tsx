@@ -1,11 +1,4 @@
 import './header.css';
-import { FaUser } from 'react-icons/fa6';
-import { FaCode } from 'react-icons/fa6';
-import { FaBriefcase } from 'react-icons/fa6';
-import { FaNewspaper } from 'react-icons/fa6';
-import { FaEnvelope } from 'react-icons/fa6';
-import { FaFile } from 'react-icons/fa6';
-import { IconType } from 'react-icons';
 import { Link } from 'react-scroll';
 import { navItems, NavItem } from '../../data/navItems';
 

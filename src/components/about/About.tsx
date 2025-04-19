@@ -2,12 +2,12 @@ import './about.css';
 import { Element } from 'react-scroll';
 import picture from '../../assets/picture.jpg';
 import { aboutItems } from '../../data/aboutItems';
-import React from 'react';
+import { ReactNode } from 'react';
 
 const About = () => {
   // Helper function to parse text with special $highlight$ syntax
-  const renderContent = (text: string) => {
-    if (!text) return null;
+  const renderContent = (text: string): ReactNode[] => {
+    if (!text) return [];
 
     // Split the text by the delimiter pattern
     const parts = text.split(/\$(.*?)\$/);
