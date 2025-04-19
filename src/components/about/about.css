@@ -23,7 +23,7 @@
 }
 
 .about-image {
-  @apply w-full max-w-md;
+  @apply w-full max-w-md md:max-w-[30%];
 }
 
 .image-container {
