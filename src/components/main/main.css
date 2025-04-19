@@ -17,7 +17,7 @@
 }
 
 .self-description {
-  @apply md:text-lg font-medium text-content mt-4 lg:max-w-2xl sm:max-w-[100%] sm:text-sm;
+  @apply font-medium mt-4 lg:max-w-2xl sm:max-w-[100%];
 }
 
 #cta-button-main {
