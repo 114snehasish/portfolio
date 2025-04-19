@@ -19,11 +19,11 @@
 }
 
 .bullet-point {
-  @apply flex gap-4 items-baseline;
+  @apply flex gap-4 items-start;
 }
 
 .bullet-icon {
-  @apply text-secondary flex-shrink-0 text-sm mt-1.5;
+  @apply text-secondary flex-shrink-0 text-lg mt-1;
 }
 
 .about-image {

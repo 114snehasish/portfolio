@@ -7,38 +7,13 @@ import { FaEnvelope } from 'react-icons/fa6';
 import { FaFile } from 'react-icons/fa6';
 import { IconType } from 'react-icons';
 import { Link } from 'react-scroll';
-
-interface NavItem {
-  to: string;
-  label: string;
-  type: 'link' | 'button';
-  icon: IconType;
-}
+import { navItems, NavItem } from '../../data/navItems';
 
 interface HeaderProps {
   // No need for scrollToAbout function or sectionRefs with react-scroll
 }
 
 export default function Header({}: HeaderProps) {
-  const navItems: NavItem[] = [
-    { to: 'about', label: '_about', type: 'link', icon: FaUser },
-    { to: 'skills', label: '_skills', type: 'link', icon: FaCode },
-    {
-      to: 'experiences',
-      label: '_experiences',
-      type: 'link',
-      icon: FaBriefcase,
-    },
-    { to: 'article', label: '_articles', type: 'link', icon: FaNewspaper },
-    { to: 'contact', label: '_contact', type: 'link', icon: FaEnvelope },
-    {
-      to: '/resume.pdf', // This needs special handling as it's not a scroll target
-      label: '/resume',
-      type: 'button',
-      icon: FaFile,
-    },
-  ];
-
   const renderLink = (item: NavItem, index: number) => {
     if (item.type === 'link') {
       return (

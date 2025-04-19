@@ -1,9 +1,36 @@
 import './about.css';
 import { Element } from 'react-scroll';
 import picture from '../../assets/picture.jpg';
-import { FaAngleRight } from 'react-icons/fa6';
+import { aboutItems } from '../../data/aboutItems';
+import React from 'react';
 
 const About = () => {
+  // Helper function to render paragraph with highlighted text
+  const renderContent = (text: string[], highlights: string[]) => {
+    const content: React.ReactNode[] = [];
+
+    // Ensure both arrays have the same length for proper interleaving
+    const maxLength = Math.max(text.length, highlights.length + 1);
+
+    for (let i = 0; i < maxLength; i++) {
+      // Add text segment if available
+      if (i < text.length) {
+        content.push(text[i]);
+      }
+
+      // Add highlighted text if available
+      if (i < highlights.length) {
+        content.push(
+          <span key={`highlight-${i}`} className="text-secondary">
+            {highlights[i]}
+          </span>
+        );
+      }
+    }
+
+    return content;
+  };
+
   return (
     <Element name="about" className="about-section">
       <div className="section-container">
@@ -11,67 +38,14 @@ const About = () => {
 
         <div className="about-content">
           <div className="about-text">
-            <div className="bullet-point">
-              <FaAngleRight className="bullet-icon" />
-              <p className="text-regular">
-                I began my career as a{' '}
-                <span className="text-secondary">
-                  Junior Documentum Developer
-                </span>
-                , rapidly establishing myself as a pivotal team member by
-                contributing significantly to diverse projects and initiatives.
-              </p>
-            </div>
-            <div className="bullet-point">
-              <FaAngleRight className="bullet-icon" />
-              <p className="text-regular">
-                Within next <span className="text-secondary">three years</span>,
-                I advanced to the role of{' '}
-                <span className="text-secondary">Team Lead</span>, where I
-                successfully orchestrated the{' '}
-                <span className="text-secondary">End-to-End Delivery</span> of
-                multiple products across various{' '}
-                <span className="text-secondary">Tech Stacks</span>.
-              </p>
-            </div>
-            <div className="bullet-point">
-              <FaAngleRight className="bullet-icon" />
-              <p className="text-regular">
-                In subsequent years, I expanded my expertise in{' '}
-                <span className="text-secondary">Cloud</span> and{' '}
-                <span className="text-secondary">DevOps</span>, architecting and
-                leading the development of numerous products across multiple
-                projects and business domains.
-              </p>
-            </div>
-            <div className="bullet-point">
-              <FaAngleRight className="bullet-icon" />
-              <p className="text-regular">
-                A highlight of my career has been the{' '}
-                <span className="text-secondary">trust and responsibility</span>{' '}
-                entrusted to me upon joining new teams, where colleagues quickly
-                recognize my ability to effectively manage and{' '}
-                <span className="text-secondary">
-                  resolve complex situations
-                </span>
-                .
-              </p>
-            </div>
-            <div className="bullet-point">
-              <FaAngleRight className="bullet-icon" />
-              <p className="text-regular">
-                In my free time, I love diving into{' '}
-                <span className="text-secondary">Side Projects</span> that let
-                me tinker and explore new ideas. I'm a bit of a tech enthusiast,
-                always curious about{' '}
-                <span className="text-secondary">Computer Hardware</span> and
-                finding ways to automate my home with{' '}
-                <span className="text-secondary">HomeLab</span> setups. And when
-                it's time to unwind, you'll find me immersed in{' '}
-                <span className="text-secondary">Video Games</span>, enjoying
-                the thrill and creativity they offer.
-              </p>
-            </div>
+            {aboutItems.map((item) => (
+              <div className="bullet-point" key={item.id}>
+                <item.icon className="bullet-icon" />
+                <p className="text-regular">
+                  {renderContent(item.text, item.highlights)}
+                </p>
+              </div>
+            ))}
           </div>
           <div className="about-image">
             <div className="image-container">
