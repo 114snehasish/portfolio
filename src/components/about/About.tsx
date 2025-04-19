@@ -5,30 +5,25 @@ import { aboutItems } from '../../data/aboutItems';
 import React from 'react';
 
 const About = () => {
-  // Helper function to render paragraph with highlighted text
-  const renderContent = (text: string[], highlights: string[]) => {
-    const content: React.ReactNode[] = [];
+  // Helper function to parse text with special $highlight$ syntax
+  const renderContent = (text: string) => {
+    if (!text) return null;
 
-    // Ensure both arrays have the same length for proper interleaving
-    const maxLength = Math.max(text.length, highlights.length + 1);
+    // Split the text by the delimiter pattern
+    const parts = text.split(/\$(.*?)\$/);
 
-    for (let i = 0; i < maxLength; i++) {
-      // Add text segment if available
-      if (i < text.length) {
-        content.push(text[i]);
-      }
+    return parts.map((part, index) => {
+      // Even indices are regular text, odd indices are highlighted text
+      const isHighlighted = index % 2 !== 0;
 
-      // Add highlighted text if available
-      if (i < highlights.length) {
-        content.push(
-          <span key={`highlight-${i}`} className="text-secondary">
-            {highlights[i]}
-          </span>
-        );
-      }
-    }
-
-    return content;
+      return isHighlighted ? (
+        <span key={`highlight-${index}`} className="text-secondary">
+          {part}
+        </span>
+      ) : (
+        part
+      );
+    });
   };
 
   return (
@@ -41,9 +36,7 @@ const About = () => {
             {aboutItems.map((item) => (
               <div className="bullet-point" key={item.id}>
                 <item.icon className="bullet-icon" />
-                <p className="text-regular">
-                  {renderContent(item.text, item.highlights)}
-                </p>
+                <p className="text-regular">{renderContent(item.text)}</p>
               </div>
             ))}
           </div>
