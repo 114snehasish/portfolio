@@ -15,6 +15,8 @@
   --transition-time: 0.3s;
   --caption-color: #87bdf8;
   --content-color: #8892b0;
+  --min-padding: 16px;
+  --vw-scale: 7.5vw;
 }
 
 /* Added a test comment for Husky pre-commit hook */
@@ -39,5 +41,13 @@ body {
 
 /* Global section container for consistent margins */
 .section-container {
-  @apply w-[85%] mx-auto px-0 sm:px-16 md:px-24 lg:px-32 xl:px-40;
+  @apply w-[85%] max-w-[1400px] mx-auto;
+  padding-left: max(
+    var(--min-padding),
+    calc(var(--vw-scale) - var(--min-padding))
+  );
+  padding-right: max(
+    var(--min-padding),
+    calc(var(--vw-scale) - var(--min-padding))
+  );
 }
