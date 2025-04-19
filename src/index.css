@@ -27,6 +27,13 @@ body {
   @apply text-content-default font-fira-code;
 }
 
+/* Tailwind component classes */
+@layer components {
+  .text-regular {
+    @apply text-base md:text-lg leading-relaxed text-content;
+  }
+}
+
 .button {
   @apply p-button-padding pl-5 pr-5 border rounded border-solid border-secondary
   bg-transparent text-secondary cursor-pointer;

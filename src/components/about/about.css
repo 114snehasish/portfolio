@@ -15,11 +15,15 @@
 }
 
 .about-text {
-  @apply flex-1 max-w-2xl md:text-left;
+  @apply flex-1 max-w-2xl md:text-left flex flex-col gap-5;
 }
 
-.about-text p {
-  @apply text-lg leading-relaxed text-gray-300;
+.bullet-point {
+  @apply flex gap-4 items-baseline;
+}
+
+.bullet-icon {
+  @apply text-secondary flex-shrink-0 text-sm mt-1.5;
 }
 
 .about-image {
