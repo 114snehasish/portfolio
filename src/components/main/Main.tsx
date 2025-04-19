@@ -1,5 +1,6 @@
 import './main.css';
 import { Link } from 'react-scroll';
+import { FaTerminal } from 'react-icons/fa6';
 
 const Main = () => {
   const yearsOfExperience = getYearsOfExperience();
@@ -36,10 +37,11 @@ const Main = () => {
             smooth={true}
             offset={-100}
             duration={500}
-            className="cta-button mt-4 inline-block cursor-pointer"
+            className="cta-button mt-4 inline-flex items-center gap-2 cursor-pointer"
             id="cta-button-main"
           >
-            $ more_about_me &gt;_
+            <FaTerminal className="text-lg" />
+            <span>more about me</span>
           </Link>
         </div>
       </section>
