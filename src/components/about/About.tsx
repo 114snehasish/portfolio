@@ -60,14 +60,16 @@ const About = () => {
             <div className="bullet-point">
               <FaAngleRight className="bullet-icon" />
               <p className="text-regular">
-                In my free time, I enjoy doing{' '}
-                <span className="text-secondary">Side Projects</span>, learning
-                about <span className="text-secondary">Computer Hardwares</span>{' '}
-                and{' '}
-                <span className="text-secondary">
-                  HomeLab and Home Automation
-                </span>{' '}
-                and <span className="text-secondary">Playing Video Games.</span>
+                In my free time, I love diving into{' '}
+                <span className="text-secondary">Side Projects</span> that let
+                me tinker and explore new ideas. I'm a bit of a tech enthusiast,
+                always curious about{' '}
+                <span className="text-secondary">Computer Hardware</span> and
+                finding ways to automate my home with{' '}
+                <span className="text-secondary">HomeLab</span> setups. And when
+                it's time to unwind, you'll find me immersed in{' '}
+                <span className="text-secondary">Video Games</span>, enjoying
+                the thrill and creativity they offer.
               </p>
             </div>
           </div>
