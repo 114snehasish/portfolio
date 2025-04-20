@@ -11,7 +11,7 @@
 }
 
 .about-content {
-  @apply flex flex-col gap-8 items-center md:flex-row md:justify-center md:items-start md:gap-12;
+  @apply flex flex-col gap-8 items-center md:flex-row md:justify-center md:items-center md:gap-12;
 }
 
 .about-text {
@@ -27,7 +27,7 @@
 }
 
 .about-image {
-  @apply w-full max-w-md md:max-w-[30%];
+  @apply w-full max-w-md md:max-w-[30%] self-center flex justify-center items-center;
 }
 
 .image-container {
