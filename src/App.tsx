@@ -6,7 +6,7 @@ import Skills from '@components/skills/Skills';
 
 function App() {
   return (
-    <div className="bg-primary text-white min-h-screen pt-24">
+    <div className="app">
       <Header />
       <Main />
       <About />
