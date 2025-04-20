@@ -1,0 +1,45 @@
+.skills-section {
+  @apply py-16 bg-primary;
+}
+
+.skills-title {
+  @apply text-2xl font-bold mb-8 text-center text-secondary;
+}
+
+.skills-subtitle {
+  @apply text-base text-content max-w-2xl mx-auto text-center mb-12;
+}
+
+.skills-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8;
+}
+
+.skill-card {
+  @apply bg-primary bg-opacity-80 p-6 rounded-lg border border-secondary border-opacity-10 
+    hover:border-opacity-30 transition-all duration-300 flex flex-col h-full;
+}
+
+.skill-header {
+  @apply flex items-center gap-3 mb-4;
+}
+
+.skill-icon {
+  @apply text-secondary text-2xl;
+}
+
+.skill-title {
+  @apply text-xl font-semibold text-secondary;
+}
+
+.skill-description {
+  @apply text-sm text-content mb-6;
+}
+
+.skill-list {
+  @apply flex flex-wrap gap-2 mt-auto;
+}
+
+.skill-tag {
+  @apply text-xs px-3 py-1 rounded-full border border-secondary 
+    text-secondary whitespace-nowrap transition-all duration-300 hover:bg-secondary hover:text-black;
+}

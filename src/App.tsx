@@ -1,7 +1,8 @@
 import './App.css';
-import Header from './components/header/Header.tsx';
-import Main from './components/main/Main.tsx';
-import About from './components/about/About.tsx';
+import Header from '@components/header/Header';
+import Main from '@components/main/Main';
+import About from '@components/about/About';
+import Skills from '@components/skills/Skills';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Main />
       <About />
+      <Skills />
     </div>
   );
 }
