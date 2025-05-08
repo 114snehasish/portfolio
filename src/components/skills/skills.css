@@ -3,11 +3,11 @@
 }
 
 .skills-title {
-  @apply text-2xl font-bold mb-8 text-center text-secondary;
+  @apply text-2xl font-bold mb-8 text-left text-secondary;
 }
 
 .skills-subtitle {
-  @apply text-base text-content max-w-2xl mx-auto text-center mb-12;
+  @apply text-base text-content max-w-4xl text-left mb-12;
 }
 
 .skills-grid {

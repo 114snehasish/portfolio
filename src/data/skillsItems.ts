@@ -1,12 +1,9 @@
 import { IconType } from 'react-icons';
-import {
-  FaReact,
-  FaNodeJs,
-  FaCloud,
-  FaDocker,
-  FaDatabase,
-  FaWrench,
-} from 'react-icons/fa6';
+import { FaWrench } from 'react-icons/fa6';
+import { MdOutlineBusinessCenter, MdOutlineComputer } from 'react-icons/md';
+import { BsClockHistory } from 'react-icons/bs';
+import { FaRegMoon } from 'react-icons/fa';
+import { RiRobot2Line } from 'react-icons/ri';
 
 // Define interface for skills categories
 export interface SkillCategory {
@@ -20,99 +17,101 @@ export interface SkillCategory {
 // Create data array with all skill categories
 export const skillCategories: SkillCategory[] = [
   {
-    id: 'frontend',
-    title: 'Frontend Development',
-    icon: FaReact,
+    id: 'the-nine-to-five',
+    title: 'The Nine to Fives',
+    icon: MdOutlineComputer,
     description:
-      'Building responsive and interactive user interfaces with modern frameworks and libraries.',
-    skills: [
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'HTML/CSS',
-      'Redux',
-      'TailwindCSS',
-      'Material UI',
-    ],
+      'Wrangling code during business hours, I turn caffeine into enterprise-ready apps—delivering ' +
+      'solutions before the clock strikes five.',
+    skills: ['Angular', 'Spring Boot', 'Azure', 'Terraform', 'GitHub Actions'],
   },
   {
-    id: 'backend',
-    title: 'Backend Development',
-    icon: FaNodeJs,
+    id: 'night-owl',
+    title: 'Night Owl',
+    icon: FaRegMoon,
     description:
-      'Developing robust server-side applications with focus on performance and scalability.',
-    skills: [
-      'Node.js',
-      'Express',
-      'Spring Boot',
-      'Java',
-      'RESTful APIs',
-      'GraphQL',
-      'Microservices',
-    ],
-  },
-  {
-    id: 'cloud',
-    title: 'Cloud Technologies',
-    icon: FaCloud,
-    description:
-      'Leveraging cloud platforms to deploy scalable and resilient applications.',
-    skills: [
-      'AWS',
-      'Azure',
-      'GCP',
-      'Serverless',
-      'Terraform',
-      'CloudFormation',
-      'IAM',
-    ],
-  },
-  {
-    id: 'devops',
-    title: 'DevOps & CI/CD',
-    icon: FaDocker,
-    description:
-      'Implementing continuous integration and deployment pipelines for efficient software delivery.',
+      'Fueled by curiosity and the quiet buzz of midnight, I chase ambitious side-projects and tinker ' +
+      'with new tech—because true innovation can’t wait for sunrise.',
     skills: [
       'Docker',
-      'Kubernetes',
-      'Jenkins',
-      'GitHub Actions',
-      'GitLab CI',
-      'Ansible',
-      'Monitoring & Logging',
+      'Cloudflare',
+      'HomeLab',
+      'Proxmox',
+      'Oracle VM VirtualBox',
+      'Keycloak',
+      'Okta',
+      'Azure',
     ],
   },
   {
-    id: 'database',
-    title: 'Database & Storage',
-    icon: FaDatabase,
+    id: 'relics-from-the-past',
+    title: 'Relics from the Past',
+    icon: BsClockHistory,
     description:
-      'Working with various database technologies for efficient data management.',
+      'A showcase of tools and platforms I’ve wrangled in the past—each a chapter in my tech ' +
+      'journey, proving that every skill leaves its mark on how I build today.',
     skills: [
-      'MongoDB',
-      'PostgreSQL',
-      'MySQL',
-      'Redis',
-      'ElasticSearch',
-      'DynamoDB',
-      'Data Modeling',
+      'DFC',
+      'D2 Config',
+      'D2FS',
+      'AWS',
+      'CloudFormation',
+      'VBA',
+      'Android',
+      'Unity',
+    ],
+  },
+  {
+    id: 'entrepreneurial-mindset',
+    title: 'The Entrepreneur in Me',
+    icon: MdOutlineBusinessCenter,
+    description:
+      'I don’t just build products—I build brands. From idea to launch, I blend creativity, ' +
+      'technology, and a dash of hustle to craft digital experiences that stand out in the crowd.',
+    skills: [
+      'Wordpress',
+      'Keycloak',
+      'Cloudflare',
+      'DigitalOcean',
+      'React',
+      'Gatsby',
+      'Hostinger',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'And some AI at the end',
+    icon: RiRobot2Line,
+    description:
+      'Crafting clever solutions with a touch of (artificial) intelligence—don’t worry, this ' +
+      'line was written with just the right amount of AI assistance.',
+    skills: [
+      'Ollama',
+      'LMStudio',
+      'GitHub Copilot',
+      'Jetbrains AI',
+      'Cursor',
+      'Warp',
     ],
   },
   {
     id: 'tools',
-    title: 'Tools & Methodologies',
+    title: 'Weapon of Choice',
     icon: FaWrench,
     description:
-      'Utilizing various tools and following best practices for software development.',
+      'Armed with a toolbox full of JetBrains gear, I pitch IntelliJ to friends with such enthusiasm,' +
+      ' you’d think I moonlight as their top salesperson (commission sadly not included) —all while' +
+      ' quietly letting Spotify’s lofi beats keep my productivity on repeat.',
     skills: [
-      'Git',
-      'Agile/Scrum',
-      'JIRA',
-      'Confluence',
-      'Unit Testing',
-      'Integration Testing',
-      'Performance Optimization',
+      'IntelliJ IDEA Ultimate',
+      'Webstorm',
+      'Rider',
+      'Basically All Jetbrains Tools',
+      'Postman',
+      'MacOS',
+      'Windows',
+      'Linux',
+      'Warp',
     ],
   },
 ];
