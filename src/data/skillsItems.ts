@@ -1,6 +1,6 @@
 import { IconType } from 'react-icons';
 import { FaWrench } from 'react-icons/fa6';
-import { MdOutlineBusinessCenter, MdOutlineComputer } from 'react-icons/md';
+import { MdOutlineComputer, MdTranslate } from 'react-icons/md';
 import { BsClockHistory } from 'react-icons/bs';
 import { FaRegMoon } from 'react-icons/fa';
 import { RiRobot2Line } from 'react-icons/ri';
@@ -22,7 +22,7 @@ export const skillCategories: SkillCategory[] = [
     icon: MdOutlineComputer,
     description:
       'Wrangling code during business hours, I turn caffeine into enterprise-ready apps—delivering ' +
-      'solutions before the clock strikes five.',
+      'solutions before the clock strikes five. Occasionally, the clock and I disagree on when five actually is.',
     skills: ['Angular', 'Spring Boot', 'Azure', 'Terraform', 'GitHub Actions'],
   },
   {
@@ -41,6 +41,7 @@ export const skillCategories: SkillCategory[] = [
       'Keycloak',
       'Okta',
       'Azure',
+      'WordPress',
     ],
   },
   {
@@ -62,20 +63,31 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: 'entrepreneurial-mindset',
-    title: 'The Entrepreneur in Me',
-    icon: MdOutlineBusinessCenter,
+    id: 'polyglot',
+    title: 'The Polyglot of SiliconLand',
+    icon: MdTranslate,
     description:
-      'I don’t just build products—I build brands. From idea to launch, I blend creativity, ' +
-      'technology, and a dash of hustle to craft digital experiences that stand out in the crowd.',
+      'Comfortable with many programming languages—and ready for the day when English itself becomes ' +
+      'the ultimate coding language (heaven help my spellcheck).',
+    skills: ['Java', 'JavaScript', 'TypeScript', 'HCL', 'C#'],
+  },
+  {
+    id: 'tools',
+    title: 'Weapon of Choice',
+    icon: FaWrench,
+    description:
+      'Armed with a toolbox full of JetBrains gear, I pitch IntelliJ to friends with such enthusiasm,' +
+      ' you’d think I moonlight as their top salesperson (commission sadly not included) —all while' +
+      ' quietly letting Spotify’s lofi beats keep my productivity on repeat.',
     skills: [
-      'Wordpress',
-      'Keycloak',
-      'Cloudflare',
-      'DigitalOcean',
-      'React',
-      'Gatsby',
-      'Hostinger',
+      'IntelliJ IDEA Ultimate',
+      'Webstorm',
+      'Rider',
+      'Postman',
+      'MacOS',
+      'Windows',
+      'Linux',
+      'Warp',
     ],
   },
   {
@@ -91,26 +103,6 @@ export const skillCategories: SkillCategory[] = [
       'GitHub Copilot',
       'Jetbrains AI',
       'Cursor',
-      'Warp',
-    ],
-  },
-  {
-    id: 'tools',
-    title: 'Weapon of Choice',
-    icon: FaWrench,
-    description:
-      'Armed with a toolbox full of JetBrains gear, I pitch IntelliJ to friends with such enthusiasm,' +
-      ' you’d think I moonlight as their top salesperson (commission sadly not included) —all while' +
-      ' quietly letting Spotify’s lofi beats keep my productivity on repeat.',
-    skills: [
-      'IntelliJ IDEA Ultimate',
-      'Webstorm',
-      'Rider',
-      'Basically All Jetbrains Tools',
-      'Postman',
-      'MacOS',
-      'Windows',
-      'Linux',
       'Warp',
     ],
   },
