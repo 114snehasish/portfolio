@@ -1,6 +1,6 @@
 import './about.css';
 import { Element } from 'react-scroll';
-import picture from '../../assets/picture.jpg';
+import picture from '@assets/picture.jpg';
 import { aboutItems } from '@data/aboutItems.ts';
 import { ReactNode } from 'react';
 
