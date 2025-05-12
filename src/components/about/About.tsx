@@ -1,7 +1,7 @@
 import './about.css';
 import { Element } from 'react-scroll';
 import picture from '@assets/picture.jpg';
-import { aboutItems } from '@data/aboutItems.ts';
+import { aboutItems } from '@data/aboutItems';
 import { ReactNode } from 'react';
 
 const About = () => {
