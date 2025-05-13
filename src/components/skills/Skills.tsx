@@ -7,11 +7,12 @@ const Skills = () => {
     <Element name="skills" className="skills-section">
       <div className="section-container">
         <h2 className="skills-title">Skills & Expertise</h2>
-        <p className="skills-subtitle text-regular">
-          A tech polymath living a double life: corporate coder by day, digital
-          tinkerer by night. I've archived tech fossils, launched ventures with
-          a keystroke, befriended AI (but still write my own code), and can't
-          stop recommending my favorite IDEs. Scroll down for the proof.
+        <p className="skills-subtitle">
+          I wear many tech hats: office programmer by day, curious explorer by
+          night. I've kept old tech skills in my back pocket, built cool side
+          projects, made friends with AI tools (while still doing the real
+          coding myself), and love telling everyone about my favorite coding
+          tools. Keep scrolling to see what I can do.
         </p>
 
         <div className="skills-grid">
