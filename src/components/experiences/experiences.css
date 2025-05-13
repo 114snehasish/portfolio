@@ -22,11 +22,11 @@
 
 /* Add a vertical line connecting the cards */
 .experience-card:not(:last-child)::after {
-  @apply content-[''] absolute left-8 top-[5.5rem] bottom-[-2rem] w-0.5 bg-secondary bg-opacity-20;
+  @apply content-[''] absolute left-8 top-[5.5rem] bottom-[-2rem] w-0.5 bg-secondary bg-opacity-20 sm:block hidden;
 }
 
 .experience-header {
-  @apply flex items-start gap-4 mb-4;
+  @apply flex items-start gap-4 mb-4 mt-8 sm:mt-0;
 }
 
 .experience-icon {
@@ -50,11 +50,11 @@
 }
 
 .experience-description {
-  @apply text-sm text-content mb-6 pl-10;
+  @apply text-sm text-content mb-6 sm:pl-10 pl-0;
 }
 
 .experience-skills {
-  @apply flex flex-wrap gap-2 mt-auto pl-10;
+  @apply flex flex-wrap gap-2 mt-auto sm:pl-10 pl-0;
 }
 
 .experience-skill-tag {
@@ -62,14 +62,14 @@
     text-secondary whitespace-nowrap transition-all duration-300 hover:bg-secondary hover:text-black;
 }
 
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .experience-card:not(:last-child)::after {
-    @apply hidden;
-  }
+.experience-type-badge {
+  @apply absolute top-2 right-2 text-xs px-2 py-1 rounded-md bg-secondary text-primary font-medium sm:text-sm sm:px-3 sm:py-1;
+}
 
-  .experience-description,
-  .experience-skills {
-    @apply pl-0;
-  }
+.experience-type-badge-professional {
+  @apply bg-secondary;
+}
+
+.experience-type-badge-personal {
+  @apply bg-secondary opacity-80;
 }

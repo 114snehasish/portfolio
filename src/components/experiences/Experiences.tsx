@@ -17,11 +17,11 @@ const Experiences = () => {
           {experienceItems.map((experience) => (
             <div className="experience-card" key={experience.id}>
               <div
-                className={`absolute top-2 right-2 text-xs px-2 py-1 rounded-md bg-secondary text-primary font-medium sm:text-sm sm:px-3 sm:py-1 experience-type-badge experience-type-badge-${experience.type.toLowerCase()}`}
+                className={`experience-type-badge experience-type-badge-${experience.type.toLowerCase()}`}
               >
                 {experience.type}
               </div>
-              <div className="experience-header mt-8 sm:mt-0">
+              <div className="experience-header">
                 <experience.icon className="experience-icon" />
                 <div className="experience-title-container">
                   <h3 className="experience-title">{experience.title}</h3>
