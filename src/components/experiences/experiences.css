@@ -1,0 +1,75 @@
+.experiences-section {
+  @apply py-16 bg-primary flex flex-col items-start justify-center min-h-[90vh];
+}
+
+.experiences-title {
+  @apply text-2xl font-bold mb-8 text-left text-secondary;
+}
+
+.experiences-subtitle {
+  @apply text-base text-content max-w-4xl text-left mb-12;
+}
+
+.experiences-timeline {
+  @apply flex flex-col gap-8 w-full;
+}
+
+.experience-card {
+  @apply bg-primary bg-opacity-80 p-6 rounded-lg border border-secondary border-opacity-10 
+    hover:border-opacity-30 transition-all duration-300 flex flex-col;
+  @apply relative;
+}
+
+/* Add a vertical line connecting the cards */
+.experience-card:not(:last-child)::after {
+  @apply content-[''] absolute left-8 top-[5.5rem] bottom-[-2rem] w-0.5 bg-secondary bg-opacity-20;
+}
+
+.experience-header {
+  @apply flex items-start gap-4 mb-4;
+}
+
+.experience-icon {
+  @apply text-secondary text-2xl mt-1;
+}
+
+.experience-title-container {
+  @apply flex flex-col;
+}
+
+.experience-title {
+  @apply text-xl font-semibold text-secondary;
+}
+
+.experience-company {
+  @apply text-base text-content font-medium;
+}
+
+.experience-period {
+  @apply text-sm text-content opacity-80;
+}
+
+.experience-description {
+  @apply text-sm text-content mb-6 pl-10;
+}
+
+.experience-skills {
+  @apply flex flex-wrap gap-2 mt-auto pl-10;
+}
+
+.experience-skill-tag {
+  @apply text-xs px-3 py-1 rounded-full border border-secondary
+    text-secondary whitespace-nowrap transition-all duration-300 hover:bg-secondary hover:text-black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .experience-card:not(:last-child)::after {
+    @apply hidden;
+  }
+
+  .experience-description,
+  .experience-skills {
+    @apply pl-0;
+  }
+}
