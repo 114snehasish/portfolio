@@ -63,13 +63,13 @@
 }
 
 .experience-type-badge {
-  @apply absolute top-2 right-2 text-xs px-2 py-1 rounded-md bg-secondary text-primary font-medium sm:text-sm sm:px-3 sm:py-1;
+  @apply absolute top-2 right-2 text-[0.65rem] px-1.5 py-0.5 rounded-md bg-secondary text-primary font-medium sm:text-xs sm:px-2 sm:py-0.5;
 }
 
 .experience-type-badge-professional {
-  @apply bg-secondary;
+  @apply bg-secondary bg-opacity-60;
 }
 
 .experience-type-badge-personal {
-  @apply bg-secondary opacity-80;
+  @apply bg-secondary bg-opacity-40;
 }
