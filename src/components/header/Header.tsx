@@ -1,12 +1,8 @@
 import './header.css';
 import { Link } from 'react-scroll';
-import { navItems, NavItem } from '../../data/navItems';
+import { NavItem, navItems } from '@data/navItems';
 
-interface HeaderProps {
-  // No need for scrollToAbout function or sectionRefs with react-scroll
-}
-
-export default function Header({}: HeaderProps) {
+export default function Header() {
   const renderLink = (item: NavItem, index: number) => {
     if (item.type === 'link') {
       return (
