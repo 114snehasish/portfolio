@@ -23,7 +23,15 @@ export const skillCategories: SkillCategory[] = [
     description:
       'Wrangling code during business hours, I turn caffeine into enterprise-ready apps—delivering ' +
       'solutions before the clock strikes five. Occasionally, the clock and I disagree on when five actually is.',
-    skills: ['Angular', 'Spring Boot', 'Azure', 'Terraform', 'GitHub Actions'],
+    skills: [
+      'Angular',
+      'Spring Boot',
+      'Azure',
+      'Terraform',
+      'GitHub Actions',
+      'Problem Solving',
+      'Production Support',
+    ],
   },
   {
     id: 'night-owl',
@@ -31,7 +39,7 @@ export const skillCategories: SkillCategory[] = [
     icon: FaRegMoon,
     description:
       'Fueled by curiosity and the quiet buzz of midnight, I chase ambitious side-projects and tinker ' +
-      'with new tech—because true innovation can’t wait for sunrise.',
+      'with new tech — because true innovation can’t wait for sunrise.',
     skills: [
       'Docker',
       'Cloudflare',
@@ -49,7 +57,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'Relics from the Past',
     icon: BsClockHistory,
     description:
-      'A showcase of tools and platforms I’ve wrangled in the past—each a chapter in my tech ' +
+      'A showcase of tools and platforms I’ve wrangled in the past — each a chapter in my tech ' +
       'journey, proving that every skill leaves its mark on how I build today.',
     skills: [
       'DFC',
@@ -77,8 +85,8 @@ export const skillCategories: SkillCategory[] = [
     icon: FaWrench,
     description:
       'Armed with a toolbox full of JetBrains gear, I pitch IntelliJ to friends with such enthusiasm,' +
-      ' you’d think I moonlight as their top salesperson (commission sadly not included) —all while' +
-      ' quietly letting Spotify’s lofi beats keep my productivity on repeat.',
+      ' you’d think I moonlight as their top salesperson (commission sadly not included) — all while' +
+      ' quietly letting Spotify’s LoFi beats keep my productivity on repeat.',
     skills: [
       'IntelliJ IDEA Ultimate',
       'Webstorm',
@@ -95,7 +103,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'And some AI at the end',
     icon: RiRobot2Line,
     description:
-      'Crafting clever solutions with a touch of (artificial) intelligence—don’t worry, this ' +
+      'Crafting clever solutions with a touch of (artificial) intelligence — don’t worry, this ' +
       'line was written with just the right amount of AI assistance.',
     skills: [
       'Ollama',
