@@ -49,8 +49,16 @@
   @apply text-sm text-content opacity-80;
 }
 
+.experience-section {
+  @apply mb-4 sm:pl-10 pl-0;
+}
+
+.experience-section-title {
+  @apply text-sm font-semibold text-secondary mb-1;
+}
+
 .experience-description {
-  @apply text-sm text-content mb-6 sm:pl-10 pl-0;
+  @apply text-sm text-content mb-2;
 }
 
 .experience-skills {
@@ -59,17 +67,17 @@
 
 .experience-skill-tag {
   @apply text-xs px-3 py-1 rounded-full border border-secondary
-    text-secondary whitespace-nowrap transition-all duration-300 hover:bg-secondary hover:text-black;
+    text-secondary whitespace-nowrap transition-all duration-300 hover:bg-secondary hover:text-primary;
 }
 
 .experience-type-badge {
-  @apply absolute top-2 right-2 text-[0.65rem] px-1.5 py-0.5 rounded-md bg-secondary text-primary font-medium sm:text-xs sm:px-2 sm:py-0.5;
+  @apply absolute top-2 right-[-8px] text-[0.65rem] px-1.5 py-0.5 rounded-md bg-secondary text-primary font-medium sm:text-xs sm:px-2 sm:py-0.5 z-10 shadow-md;
 }
 
 .experience-type-badge-professional {
-  @apply bg-secondary bg-opacity-60;
+  @apply bg-secondary bg-opacity-60 border-r-2 border-b-2 border-secondary border-opacity-30;
 }
 
 .experience-type-badge-personal {
-  @apply bg-secondary bg-opacity-40;
+  @apply bg-secondary bg-opacity-40 border-r-2 border-b-2 border-secondary border-opacity-20;
 }

@@ -15,7 +15,8 @@ export interface ExperienceItem {
   company: string;
   period: string;
   icon: IconType;
-  description: string;
+  rolesAndResponsibilities: string;
+  keyOutcomes: string;
   skills: string[];
   type: 'Personal' | 'Professional'; // Type of experience
 }
@@ -28,8 +29,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'Tech Innovations Inc.',
     period: '2021 - Present',
     icon: FaLaptopCode,
-    description:
-      'Leading development of enterprise applications using modern technologies. Architecting cloud-native solutions and mentoring junior developers. Implementing CI/CD pipelines and ensuring code quality through automated testing.',
+    rolesAndResponsibilities:
+      'Leading development of enterprise applications using modern technologies. Architecting cloud-native solutions and mentoring junior developers. Responsible for technical design decisions and code reviews.',
+    keyOutcomes:
+      'Successfully implemented CI/CD pipelines reducing deployment time by 40%. Improved code quality metrics through automated testing and reduced production bugs by 30%.',
     skills: [
       'Angular',
       'Spring Boot',
@@ -47,8 +50,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'CloudSys Solutions',
     period: '2019 - 2021',
     icon: FaCloud,
-    description:
-      'Designed and implemented cloud infrastructure for enterprise clients. Migrated on-premise applications to cloud platforms. Optimized cloud resources for cost efficiency while maintaining high availability and performance.',
+    rolesAndResponsibilities:
+      'Designed and implemented cloud infrastructure for enterprise clients. Migrated on-premise applications to cloud platforms. Led technical discussions with clients to understand requirements and propose solutions.',
+    keyOutcomes:
+      'Optimized cloud resources for cost efficiency resulting in 25% reduction in monthly cloud expenses. Achieved 99.9% uptime for critical applications through robust architecture design.',
     skills: [
       'AWS',
       'Azure',
@@ -66,8 +71,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'DataFlow Systems',
     period: '2017 - 2019',
     icon: FaServer,
-    description:
+    rolesAndResponsibilities:
       'Developed and maintained RESTful APIs and microservices. Implemented database solutions and optimized query performance. Collaborated with frontend developers to integrate backend services with user interfaces.',
+    keyOutcomes:
+      'Improved API response times by 60% through query optimization and caching strategies. Successfully delivered 5 major feature releases with zero critical bugs reported in production.',
     skills: [
       'Java',
       'Spring Framework',
@@ -85,8 +92,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'CodeCraft Solutions',
     period: '2015 - 2017',
     icon: FaCode,
-    description:
-      'Started as a junior developer working on web applications. Gained experience in full-stack development and agile methodologies. Participated in code reviews and contributed to team projects.',
+    rolesAndResponsibilities:
+      'Started as a junior developer working on web applications. Participated in daily stand-ups and sprint planning. Collaborated with senior developers on feature implementation and bug fixes.',
+    keyOutcomes:
+      'Gained experience in full-stack development and agile methodologies. Successfully contributed to 3 major client projects with positive feedback. Improved code quality through active participation in code reviews.',
     skills: [
       'JavaScript',
       'HTML/CSS',
@@ -104,8 +113,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'TechStart Innovations',
     period: '2014 - 2015',
     icon: FaBriefcase,
-    description:
-      'Completed a year-long internship program while finishing university studies. Assisted senior developers with coding tasks and learned industry best practices. Developed small features for web applications.',
+    rolesAndResponsibilities:
+      'Completed a year-long internship program while finishing university studies. Assisted senior developers with coding tasks and bug fixes. Participated in team meetings and learning sessions.',
+    keyOutcomes:
+      'Learned industry best practices and development workflows. Developed small features for web applications that were successfully deployed to production. Received mentorship that established a strong foundation for future roles.',
     skills: [
       'Java',
       'JavaScript',
@@ -122,8 +133,10 @@ export const experienceItems: ExperienceItem[] = [
     company: 'Personal Project',
     period: '2023',
     icon: FaLaptop,
-    description:
-      'Designed and developed a personal portfolio website to showcase my skills and experience. Implemented responsive design, animations, and modern UI/UX principles. Used React and TypeScript to create a maintainable and scalable codebase.',
+    rolesAndResponsibilities:
+      'Designed and developed a personal portfolio website to showcase my skills and experience. Managed all aspects of the project from design to deployment. Implemented responsive design and modern UI/UX principles.',
+    keyOutcomes:
+      'Created a maintainable and scalable codebase using React and TypeScript. Achieved perfect Lighthouse scores for performance and accessibility. Received positive feedback from industry professionals on design and user experience.',
     skills: [
       'React',
       'TypeScript',

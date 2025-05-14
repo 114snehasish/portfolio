@@ -30,7 +30,21 @@ const Experiences = () => {
                 </div>
               </div>
 
-              <p className="experience-description">{experience.description}</p>
+              <div className="experience-section">
+                <h4 className="experience-section-title">
+                  Roles & Responsibilities
+                </h4>
+                <p className="experience-description">
+                  {experience.rolesAndResponsibilities}
+                </p>
+              </div>
+
+              <div className="experience-section">
+                <h4 className="experience-section-title">Key Outcomes</h4>
+                <p className="experience-description">
+                  {experience.keyOutcomes}
+                </p>
+              </div>
 
               <div className="experience-skills">
                 {experience.skills.map((skill) => (
