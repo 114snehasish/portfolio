@@ -8,43 +8,78 @@ import {
   FaServer,
 } from 'react-icons/fa6';
 
-// Define interface for experience items
-export interface ExperienceItem {
+// Base interface with common properties
+interface BaseExperienceItem {
   id: string;
   title: string;
-  company: string;
   period: string;
   icon: IconType;
-  rolesAndResponsibilities: string;
   keyOutcomes: string;
   skills: string[];
-  type: 'Personal' | 'Professional'; // Type of experience
-  githubUrl?: string; // Optional GitHub URL for personal projects
-  liveUrl?: string; // Optional live URL for personal projects
 }
+
+// Personal experience type
+interface PersonalExperienceItem extends BaseExperienceItem {
+  type: 'Personal';
+  githubUrl?: string; // GitHub URL for personal projects
+  liveUrl?: string; // Live URL for personal projects
+}
+
+// Professional experience type
+interface ProfessionalExperienceItem extends BaseExperienceItem {
+  type: 'Professional';
+  company: string; // Required for Professional experience
+  rolesAndResponsibilities: string;
+}
+
+// Union type combining both experience types
+export type ExperienceItem =
+  | PersonalExperienceItem
+  | ProfessionalExperienceItem;
 
 // Create data array with all experience items
 export const experienceItems: ExperienceItem[] = [
   {
-    id: 'senior-developer',
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
-    period: '2021 - Present',
+    id: 'portfolio-v2',
+    title: 'Portfolio Website v2',
+    period: 'APR 2024 - June 2025',
     icon: FaLaptopCode,
-    rolesAndResponsibilities:
-      'Leading development of enterprise applications using modern technologies. Architecting cloud-native solutions and mentoring junior developers. Responsible for technical design decisions and code reviews.',
-    keyOutcomes:
-      'Successfully implemented CI/CD pipelines reducing deployment time by 40%. Improved code quality metrics through automated testing and reduced production bugs by 30%.',
+    keyOutcomes: '',
     skills: [
-      'Angular',
-      'Spring Boot',
-      'Azure',
+      'React',
+      'Vite',
+      'TailwindCSS',
+      'Azure Static App Service',
       'Terraform',
       'GitHub Actions',
-      'Microservices',
-      'DevOps',
+      'Cursor',
+      'WebStorm',
+      'Jetbrains Junie',
     ],
-    type: 'Professional',
+    type: 'Personal',
+    githubUrl: 'https://github.com/username/portfolio-v2',
+    liveUrl: 'https://portfolio-v2-demo.example.com',
+  },
+
+  {
+    id: 'personal-blog',
+    title: 'Personal Tech Blog',
+    period: '2022 - Present',
+    icon: FaLaptopCode,
+    keyOutcomes:
+      'Published over 20 technical articles that have helped developers solve common problems. Built a growing audience of tech enthusiasts and received positive feedback from the developer community.',
+    skills: [
+      'Technical Writing',
+      'JavaScript',
+      'React',
+      'Web Performance',
+      'SEO',
+      'Content Strategy',
+      'Gatsby',
+    ],
+    type: 'Personal',
+    githubUrl: 'https://github.com/username/tech-blog',
+    liveUrl: 'https://tech-blog-demo.example.com',
   },
   {
     id: 'cloud-engineer',
@@ -132,11 +167,8 @@ export const experienceItems: ExperienceItem[] = [
   {
     id: 'personal-portfolio',
     title: 'Portfolio Website',
-    company: 'Personal Project',
     period: '2023',
     icon: FaLaptop,
-    rolesAndResponsibilities:
-      'Designed and developed a personal portfolio website to showcase my skills and experience. Managed all aspects of the project from design to deployment. Implemented responsive design and modern UI/UX principles.',
     keyOutcomes:
       'Created a maintainable and scalable codebase using React and TypeScript. Achieved perfect Lighthouse scores for performance and accessibility. Received positive feedback from industry professionals on design and user experience.',
     skills: [
