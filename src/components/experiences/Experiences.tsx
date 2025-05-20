@@ -1,6 +1,25 @@
 import './experiences.css';
 import { Element } from 'react-scroll';
-import { experienceItems } from '@data/experiencesItems';
+import { ExperienceItem, experienceItems } from '@data/experiencesItems';
+import { FaGithub, FaLink } from 'react-icons/fa6';
+
+// Type guard function to check if experience is Personal type
+const isPersonalExperience = (
+  experience: ExperienceItem
+): experience is ExperienceItem & {
+  type: 'Personal';
+  githubUrl?: string;
+  liveUrl?: string;
+} => {
+  return experience.type === 'Personal';
+};
+
+// Type guard function to check if experience is Professional type
+const isProfessionalExperience = (
+  experience: ExperienceItem
+): experience is ExperienceItem & { type: 'Professional'; company: string } => {
+  return experience.type === 'Professional';
+};
 
 const Experiences = () => {
   return (
@@ -24,20 +43,49 @@ const Experiences = () => {
               <div className="experience-header">
                 <experience.icon className="experience-icon" />
                 <div className="experience-title-container">
-                  <h3 className="experience-title">{experience.title}</h3>
-                  <p className="experience-company">{experience.company}</p>
+                  <div className="experience-title-row">
+                    <h3 className="experience-title">{experience.title}</h3>
+                    {isPersonalExperience(experience) &&
+                      experience.githubUrl && (
+                        <a
+                          href={experience.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="experience-link-icon"
+                          title="View GitHub Repository"
+                        >
+                          <FaGithub />
+                        </a>
+                      )}
+                    {isPersonalExperience(experience) && experience.liveUrl && (
+                      <a
+                        href={experience.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="experience-link-icon"
+                        title="View Live Site"
+                      >
+                        <FaLink />
+                      </a>
+                    )}
+                  </div>
+                  {isProfessionalExperience(experience) && (
+                    <p className="experience-company">{experience.company}</p>
+                  )}
                   <p className="experience-period">{experience.period}</p>
                 </div>
               </div>
 
-              <div className="experience-section">
-                <h4 className="experience-section-title">
-                  Roles & Responsibilities
-                </h4>
-                <p className="experience-description">
-                  {experience.rolesAndResponsibilities}
-                </p>
-              </div>
+              {isProfessionalExperience(experience) && (
+                <div className="experience-section">
+                  <h4 className="experience-section-title">
+                    Roles & Responsibilities
+                  </h4>
+                  <p className="experience-description">
+                    {experience.rolesAndResponsibilities}
+                  </p>
+                </div>
+              )}
 
               <div className="experience-section">
                 <h4 className="experience-section-title">Key Outcomes</h4>

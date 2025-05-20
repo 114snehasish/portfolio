@@ -1,88 +1,140 @@
 import { IconType } from 'react-icons';
-import {
-  FaBriefcase,
-  FaCloud,
-  FaCode,
-  FaLaptop,
-  FaLaptopCode,
-  FaServer,
-} from 'react-icons/fa6';
+import { FaBriefcase, FaCode, FaLaptop } from 'react-icons/fa6';
+import { BsCashStack, BsHouse, BsPerson } from 'react-icons/bs';
+import { BiSolidPlaneTakeOff } from 'react-icons/bi';
 
-// Define interface for experience items
-export interface ExperienceItem {
+// Base interface with common properties
+interface BaseExperienceItem {
   id: string;
   title: string;
-  company: string;
   period: string;
   icon: IconType;
-  rolesAndResponsibilities: string;
   keyOutcomes: string;
   skills: string[];
-  type: 'Personal' | 'Professional'; // Type of experience
 }
+
+// Personal experience type
+interface PersonalExperienceItem extends BaseExperienceItem {
+  type: 'Personal';
+  githubUrl?: string; // GitHub URL for personal projects
+  liveUrl?: string; // Live URL for personal projects
+}
+
+// Professional experience type
+interface ProfessionalExperienceItem extends BaseExperienceItem {
+  type: 'Professional';
+  company: string; // Required for Professional experience
+  rolesAndResponsibilities: string;
+}
+
+// Union type combining both experience types
+export type ExperienceItem =
+  | PersonalExperienceItem
+  | ProfessionalExperienceItem;
 
 // Create data array with all experience items
 export const experienceItems: ExperienceItem[] = [
   {
-    id: 'senior-developer',
-    title: 'Senior Full Stack Developer',
-    company: 'Tech Innovations Inc.',
-    period: '2021 - Present',
-    icon: FaLaptopCode,
-    rolesAndResponsibilities:
-      'Leading development of enterprise applications using modern technologies. Architecting cloud-native solutions and mentoring junior developers. Responsible for technical design decisions and code reviews.',
+    id: 'portfolio-v2',
+    title: 'Portfolio Website v2',
+    period: 'APR 2024 - June 2025',
+    icon: BsPerson,
     keyOutcomes:
-      'Successfully implemented CI/CD pipelines reducing deployment time by 40%. Improved code quality metrics through automated testing and reduced production bugs by 30%.',
+      'Developed a modern, responsive portfolio website utilizing React and TailwindCSS for efficient styling. Implemented infrastructure as code principles with Terraform for Azure deployment. Significantly enhanced development efficiency through Vibe Coding techniques, which facilitated rapid code generation while maintaining high quality standards. Established a robust CI/CD pipeline using GitHub Actions for automated testing and deployment.',
     skills: [
-      'Angular',
-      'Spring Boot',
+      'React',
+      'Vite',
+      'TailwindCSS',
+      'Azure Static App Service',
+      'Terraform',
+      'GitHub Actions',
+      'Cursor',
+      'WebStorm',
+      'Jetbrains Junie',
+      'Vibe Coding',
+      'Content Strategy',
+      'SEO',
+    ],
+    type: 'Personal',
+    githubUrl: 'https://github.com/username/portfolio-v2',
+    liveUrl: 'https://portfolio-v2-demo.example.com',
+  },
+
+  {
+    id: 'homelab',
+    title: 'Homelab',
+    period: 'JAN 2025 - Present',
+    icon: BsHouse,
+    keyOutcomes:
+      'Designing and implementing a comprehensive homelab environment for experimenting with enterprise-grade technologies. Establishing infrastructure as code practices using Terraform, containerization with Docker and Portainer, identity management via Keycloak, and DNS services with Bind9. This ongoing project is significantly enhancing my technical proficiency while providing hands-on experience. Future expansion plans include Kubernetes for orchestration, network segmentation for security, enhanced storage solutions, GitOps workflows for deployment automation, observability tools for monitoring, and increased utilization of on-premises hardware with gradual migration away from cloud services. The project bridges theoretical knowledge with practical implementation skills in a structured learning environment.',
+    skills: [
+      'Virtual Machine (Type 2 Hypervisor)',
+      'Linux',
       'Azure',
       'Terraform',
       'GitHub Actions',
-      'Microservices',
-      'DevOps',
-    ],
-    type: 'Professional',
-  },
-  {
-    id: 'cloud-engineer',
-    title: 'Cloud Solutions Engineer',
-    company: 'CloudSys Solutions',
-    period: '2019 - 2021',
-    icon: FaCloud,
-    rolesAndResponsibilities:
-      'Designed and implemented cloud infrastructure for enterprise clients. Migrated on-premise applications to cloud platforms. Led technical discussions with clients to understand requirements and propose solutions.',
-    keyOutcomes:
-      'Optimized cloud resources for cost efficiency resulting in 25% reduction in monthly cloud expenses. Achieved 99.9% uptime for critical applications through robust architecture design.',
-    skills: [
-      'AWS',
-      'Azure',
-      'Terraform',
       'Docker',
-      'Kubernetes',
-      'CI/CD',
-      'Infrastructure as Code',
+      'Keycloak',
+      'Portainer',
+      'Bind9',
+    ],
+    type: 'Personal',
+    githubUrl: 'https://github.com/username/tech-blog',
+  },
+  {
+    id: 'technical-squad-lead',
+    title: 'Technical Squad Lead',
+    company: 'American Airlines @ Cognizant',
+    period: 'FEB 2023 - Present',
+    icon: BiSolidPlaneTakeOff,
+    rolesAndResponsibilities:
+      'Spearheading the architectural design and development lifecycle of a mission-critical application utilized by pilots for schedule management. Responsibilities encompass comprehensive requirement analysis, backlog refinement, technical design implementation, and mentoring team members to expedite business objective achievement while ensuring adherence to code quality standards. Additionally, orchestrating release planning and deployment strategies for the team. Further accountabilities include managing external audit compliance, facilitating professional development through structured knowledge transfer sessions, and implementing systematic work item organization methodologies to optimize delivery efficiency.',
+    keyOutcomes:
+      "Successfully implemented Active-Active architecture to enhance reliability and availability of mission-critical system components. Orchestrated the strategic transformation of the product's network infrastructure to a Hub/Spoke topology, significantly improving scalability and performance. Formulated and executed comprehensive strategies for optimizing production support processes, resulting in enhanced system stability and reduced incident resolution time.",
+    skills: [
+      'Spring Boot',
+      'Angular',
+      'Azure App Services',
+      'Azure Logic Apps',
+      'Azure Functions',
+      'Azure Key Vault',
+      'Azure SQL Database',
+      'Azure Storage',
+      'Azure Container Instances',
+      'Azure Traffic Manager',
+      'Terraform',
+      'GitHub Actions',
+      'Mentorship',
+      'Innovation',
+      'Problem Solving',
+      'Process Improvement',
     ],
     type: 'Professional',
   },
   {
-    id: 'backend-developer',
-    title: 'Backend Developer',
-    company: 'DataFlow Systems',
-    period: '2017 - 2019',
-    icon: FaServer,
+    id: 'lead-developer',
+    title: 'Lead Developer',
+    company: 'Western Union @ Cognizant',
+    period: 'JAN 2022 - FEB 2023',
+    icon: BsCashStack,
     rolesAndResponsibilities:
       'Developed and maintained RESTful APIs and microservices. Implemented database solutions and optimized query performance. Collaborated with frontend developers to integrate backend services with user interfaces.',
     keyOutcomes:
       'Improved API response times by 60% through query optimization and caching strategies. Successfully delivered 5 major feature releases with zero critical bugs reported in production.',
     skills: [
-      'Java',
-      'Spring Framework',
-      'SQL',
-      'MongoDB',
-      'RabbitMQ',
-      'API Design',
+      'Spring Boot',
+      'AWS ECS',
+      'AWS Fargate',
+      'AWS Lambda',
+      'CloudFormation',
+      'API Gateway',
       'Microservices',
+      'CloudWatch',
+      'Jenkins',
+      'Spinnaker',
+      'Apache Airflow',
+      'Mentorship',
+      'Process Improvement',
     ],
     type: 'Professional',
   },
@@ -130,11 +182,8 @@ export const experienceItems: ExperienceItem[] = [
   {
     id: 'personal-portfolio',
     title: 'Portfolio Website',
-    company: 'Personal Project',
     period: '2023',
     icon: FaLaptop,
-    rolesAndResponsibilities:
-      'Designed and developed a personal portfolio website to showcase my skills and experience. Managed all aspects of the project from design to deployment. Implemented responsive design and modern UI/UX principles.',
     keyOutcomes:
       'Created a maintainable and scalable codebase using React and TypeScript. Achieved perfect Lighthouse scores for performance and accessibility. Received positive feedback from industry professionals on design and user experience.',
     skills: [
@@ -147,5 +196,7 @@ export const experienceItems: ExperienceItem[] = [
       'Vite',
     ],
     type: 'Personal',
+    githubUrl: 'https://github.com/username/portfolio',
+    liveUrl: 'https://portfolio-demo.example.com',
   },
 ];
