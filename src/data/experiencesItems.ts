@@ -19,6 +19,8 @@ export interface ExperienceItem {
   keyOutcomes: string;
   skills: string[];
   type: 'Personal' | 'Professional'; // Type of experience
+  githubUrl?: string; // Optional GitHub URL for personal projects
+  liveUrl?: string; // Optional live URL for personal projects
 }
 
 // Create data array with all experience items
@@ -147,5 +149,7 @@ export const experienceItems: ExperienceItem[] = [
       'Vite',
     ],
     type: 'Personal',
+    githubUrl: 'https://github.com/username/portfolio',
+    liveUrl: 'https://portfolio-demo.example.com',
   },
 ];

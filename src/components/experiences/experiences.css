@@ -37,6 +37,14 @@
   @apply flex flex-col;
 }
 
+.experience-title-row {
+  @apply flex items-center gap-2;
+}
+
+.experience-link-icon {
+  @apply text-sm text-content transition-colors duration-200 hover:text-white;
+}
+
 .experience-title {
   @apply text-xl font-semibold text-secondary;
 }

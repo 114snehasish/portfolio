@@ -1,6 +1,7 @@
 import './experiences.css';
 import { Element } from 'react-scroll';
 import { experienceItems } from '@data/experiencesItems';
+import { FaGithub, FaLink } from 'react-icons/fa6';
 
 const Experiences = () => {
   return (
@@ -24,7 +25,31 @@ const Experiences = () => {
               <div className="experience-header">
                 <experience.icon className="experience-icon" />
                 <div className="experience-title-container">
-                  <h3 className="experience-title">{experience.title}</h3>
+                  <div className="experience-title-row">
+                    <h3 className="experience-title">{experience.title}</h3>
+                    {experience.githubUrl && (
+                      <a
+                        href={experience.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="experience-link-icon"
+                        title="View GitHub Repository"
+                      >
+                        <FaGithub />
+                      </a>
+                    )}
+                    {experience.liveUrl && (
+                      <a
+                        href={experience.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="experience-link-icon"
+                        title="View Live Site"
+                      >
+                        <FaLink />
+                      </a>
+                    )}
+                  </div>
                   <p className="experience-company">{experience.company}</p>
                   <p className="experience-period">{experience.period}</p>
                 </div>
