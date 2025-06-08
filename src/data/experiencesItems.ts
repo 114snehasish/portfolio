@@ -3,6 +3,7 @@ import { BsCapsule, BsCashStack, BsPerson } from 'react-icons/bs';
 import { BiSolidPlaneTakeOff } from 'react-icons/bi';
 import { ImLab } from 'react-icons/im';
 import { TfiWrite } from 'react-icons/tfi';
+import { SiApachemaven } from 'react-icons/si';
 
 // Base interface with common properties
 interface BaseExperienceItem {
@@ -33,7 +34,7 @@ export type ExperienceItem =
   | PersonalExperienceItem
   | ProfessionalExperienceItem;
 
-// Create data array with all experience items
+// Create a data array with all experience items
 export const experienceItems: ExperienceItem[] = [
   {
     id: 1,
@@ -57,8 +58,8 @@ export const experienceItems: ExperienceItem[] = [
       'SEO',
     ],
     type: 'Personal',
-    githubUrl: 'https://github.com/username/portfolio-v2',
-    liveUrl: 'https://portfolio-v2-demo.example.com',
+    githubUrl: 'https://github.com/114snehasish/portfolio',
+    liveUrl: 'https://www.snehasish-chakraborty.com',
   },
 
   {
@@ -80,10 +81,33 @@ export const experienceItems: ExperienceItem[] = [
       'Bind9',
     ],
     type: 'Personal',
-    githubUrl: 'https://github.com/username/tech-blog',
+    githubUrl: 'https://github.com/114snehasish/homelab-azure',
   },
   {
     id: 3,
+    title: 'Author of Spring Client Resolver Library',
+    period: 'FEB 2023 - APR 2023',
+    icon: SiApachemaven,
+    keyOutcomes:
+      'Created a Spring Boot library that can detect Client Information calling an endpoint, providing valuable insights for API monitoring and security. Through this project, I learned what it takes to become eligible to contribute to Maven Central Repository, including prerequisites such as comprehensive documentation and expandability. The library was intentionally designed with an architecture that allows for easy extension, making it accessible for anyone willing to contribute and enhance its capabilities. This experience deepened my understanding of open-source development principles and the importance of creating maintainable, well-documented code that can benefit the wider developer community.',
+    skills: [
+      'Spring Boot',
+      'Java',
+      'Maven Central',
+      'API Development',
+      'Open Source',
+      'GitHub',
+      'Git',
+      'Documentation',
+      'Extensible Architecture',
+      'Library Design',
+      'Community Engagement',
+    ],
+    type: 'Personal',
+    githubUrl: 'https://github.com/114snehasish/spring-client-resolver',
+  },
+  {
+    id: 4,
     title: 'Technical Squad Lead',
     company: 'American Airlines @ Cognizant',
     period: 'FEB 2023 - Present',
@@ -113,7 +137,7 @@ export const experienceItems: ExperienceItem[] = [
     type: 'Professional',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Lead Developer',
     company: 'Western Union @ Cognizant',
     period: 'JAN 2022 - FEB 2023',
@@ -140,7 +164,7 @@ export const experienceItems: ExperienceItem[] = [
     type: 'Professional',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Portfolio Website V1',
     period: 'APR 2021',
     icon: BsPerson,
@@ -157,11 +181,10 @@ export const experienceItems: ExperienceItem[] = [
       'Personal Branding',
     ],
     type: 'Personal',
-    githubUrl: 'https://github.com/username/portfolio',
     liveUrl: 'https://v1.snehasish-chakraborty.com',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Technical Content Writer',
     period: 'APR 2021 - Present',
     icon: TfiWrite,
@@ -179,7 +202,7 @@ export const experienceItems: ExperienceItem[] = [
     liveUrl: 'https://blogs.snehasish-chakraborty.com',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Architect & Lead Developer',
     company: 'Johnson & Johnson @ Tata Consultancy Services',
     period: 'FEB 2021 - DEC 2021',
@@ -203,7 +226,7 @@ export const experienceItems: ExperienceItem[] = [
     type: 'Professional',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Lead D2 Developer',
     company: 'Johnson & Johnson @ Tata Consultancy Services',
     period: 'MAR 2020 - FEB 2021',
@@ -224,7 +247,7 @@ export const experienceItems: ExperienceItem[] = [
     type: 'Professional',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Architect & Lead Developer',
     company: 'Johnson & Johnson @ Tata Consultancy Services',
     period: 'FEB 2019 - FEB 2020',
@@ -249,7 +272,7 @@ export const experienceItems: ExperienceItem[] = [
     type: 'Professional',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Java Developer and Support Associate',
     company: 'Johnson & Johnson @ Tata Consultancy Services',
     period: 'APR 2016 - FEB 2019',
