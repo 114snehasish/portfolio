@@ -1,0 +1,63 @@
+.articles-section {
+  @apply py-16 bg-primary flex flex-col items-start justify-center min-h-[90vh];
+}
+
+.articles-title {
+  @apply text-2xl font-bold mb-8 text-left text-secondary;
+}
+
+.articles-subtitle {
+  @apply text-base text-content max-w-4xl text-left mb-12;
+}
+
+.articles-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.article-card {
+  @apply bg-primary bg-opacity-80 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 border border-secondary border-opacity-10 hover:border-opacity-30;
+}
+
+.article-image-container {
+  @apply relative h-48 overflow-hidden;
+}
+
+.article-image {
+  @apply w-full h-full object-cover;
+}
+
+.article-content {
+  @apply p-4;
+}
+
+.article-title {
+  @apply text-xl font-bold mb-2 text-secondary;
+}
+
+.article-excerpt {
+  @apply text-content mb-4 line-clamp-3;
+}
+
+.article-meta {
+  @apply flex justify-between items-center text-sm text-content;
+}
+
+.article-date {
+  @apply flex items-center;
+}
+
+.article-link {
+  @apply text-secondary hover:text-white transition-colors duration-200 flex items-center;
+}
+
+.article-link-icon {
+  @apply ml-1;
+}
+
+.articles-loading {
+  @apply text-center py-12 text-white;
+}
+
+.articles-error {
+  @apply text-center py-12 text-red-500;
+}
