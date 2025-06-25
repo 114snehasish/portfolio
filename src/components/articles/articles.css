@@ -15,7 +15,7 @@
 }
 
 .article-card {
-  @apply bg-primary bg-opacity-80 rounded-lg overflow-hidden shadow-lg transition-all duration-300 cursor-pointer border border-secondary border-opacity-10 hover:border-opacity-30 hover:shadow-xl flex flex-col h-full;
+  @apply bg-primary bg-opacity-80 rounded-lg overflow-hidden shadow-lg transition-transform transition-shadow duration-300 cursor-pointer border border-secondary border-opacity-10 hover:border-opacity-30 hover:shadow-xl flex flex-col h-full;
 }
 
 .article-image-container {
