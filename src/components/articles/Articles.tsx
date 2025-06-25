@@ -103,11 +103,6 @@ const Articles = () => {
     setLoadedImages((prev) => new Set(prev).add(articleId));
   };
 
-  // Handle card click to open article
-  const handleCardClick = (link: string) => {
-    window.open(link, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <Element name="article" className="articles-section">
       <div className="section-container">
@@ -124,39 +119,36 @@ const Articles = () => {
         ) : (
           <div className="articles-container">
             {articles.map((article) => (
-              <div
-                key={article.id}
-                className="article-card"
-                role="link"
-                tabIndex="0"
-                onClick={() => handleCardClick(article.link)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    handleCardClick(article.link);
-                  }
-                }}
-              >
-                <div className="article-image-container">
+              <div key={article.id} className="article-card">
+                <div
+                  className="article-image-container"
+                  style={{ position: 'relative' }}
+                >
                   {/* Placeholder SVG */}
                   <img
                     src={placeholderImage}
                     alt="placeholder"
-                    className={`article-image-placeholder ${
-                      loadedImages.has(article.id) ? 'loaded' : ''
-                    }`}
+                    className="article-image"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      opacity: loadedImages.has(article.id) ? 0 : 1,
+                      transition: 'opacity 0.3s ease-in-out',
+                    }}
                   />
                   {/* Actual article image */}
                   <img
                     src={getOptimizedImageUrl(article)}
                     alt={article.title.rendered}
-                    className={`article-image-main ${
-                      loadedImages.has(article.id) ? 'loaded' : ''
-                    }`}
+                    className="article-image"
                     loading="lazy"
                     onLoad={() => handleImageLoad(article.id)}
+                    style={{
+                      opacity: loadedImages.has(article.id) ? 1 : 0,
+                      transition: 'opacity 0.3s ease-in-out',
+                    }}
                   />
-                  {/* Overlay for hover effect */}
-                  <div className="article-image-overlay"></div>
                 </div>
                 <div className="article-content">
                   <h3
@@ -179,7 +171,6 @@ const Articles = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="article-link"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       Read More
                       <FaExternalLinkAlt className="article-link-icon" />
