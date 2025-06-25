@@ -15,7 +15,7 @@
 }
 
 .article-card {
-  @apply bg-primary bg-opacity-80 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 border border-secondary border-opacity-10 hover:border-opacity-30;
+  @apply bg-primary bg-opacity-80 rounded-lg overflow-hidden shadow-lg transition-transform transition-shadow duration-300 cursor-pointer border border-secondary border-opacity-10 hover:border-opacity-30 hover:shadow-xl flex flex-col h-full;
 }
 
 .article-image-container {
@@ -23,11 +23,44 @@
 }
 
 .article-image {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full object-cover transition-all duration-300 ease-in-out;
+}
+
+.article-image-overlay {
+  @apply absolute inset-0 bg-secondary opacity-0 transition-opacity duration-300 ease-in-out;
+}
+
+/* Placeholder image styles */
+.article-image-placeholder {
+  @apply absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-300 ease-in-out;
+}
+
+.article-image-placeholder.loaded {
+  @apply opacity-0;
+}
+
+.article-image-main {
+  @apply w-full h-full object-cover opacity-0 transition-all duration-300 ease-in-out;
+}
+
+.article-image-main.loaded {
+  @apply opacity-100;
+}
+
+.article-card:hover .article-image-main {
+  @apply scale-105;
+}
+
+.article-card:hover .article-image-placeholder {
+  @apply scale-105;
+}
+
+.article-card:hover .article-image-overlay {
+  @apply opacity-20;
 }
 
 .article-content {
-  @apply p-4;
+  @apply p-4 flex flex-col justify-between flex-grow;
 }
 
 .article-title {
@@ -35,11 +68,11 @@
 }
 
 .article-excerpt {
-  @apply text-content mb-4 line-clamp-3;
+  @apply text-content mb-4 flex-grow line-clamp-5;
 }
 
 .article-meta {
-  @apply flex justify-between items-center text-sm text-content;
+  @apply flex justify-between items-center text-sm text-content mt-auto;
 }
 
 .article-date {
