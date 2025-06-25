@@ -127,7 +127,14 @@ const Articles = () => {
               <div
                 key={article.id}
                 className="article-card"
+                role="link"
+                tabIndex="0"
                 onClick={() => handleCardClick(article.link)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleCardClick(article.link);
+                  }
+                }}
               >
                 <div className="article-image-container">
                   {/* Placeholder SVG */}
