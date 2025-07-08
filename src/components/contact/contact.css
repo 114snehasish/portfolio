@@ -32,6 +32,10 @@
   @apply text-secondary text-lg;
 }
 
+.location-text {
+  @apply text-content text-base;
+}
+
 .social-links {
   @apply space-y-4;
 }
@@ -43,6 +47,10 @@
 
 .social-icon {
   @apply text-secondary text-2xl;
+}
+
+.social-label {
+  @apply text-content;
 }
 
 /* Contact Form */

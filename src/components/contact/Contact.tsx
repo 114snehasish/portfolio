@@ -89,6 +89,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
+                  aria-label={link.name}
                 >
                   <link.icon className="social-icon" />
                   <span className="social-label">{link.label}</span>
