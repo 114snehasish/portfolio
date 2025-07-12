@@ -1,43 +1,8 @@
 import './contact.css';
 import { Element } from 'react-scroll';
-import { FaEnvelope, FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { socialLinks } from '@data/contactItems';
 
 const Contact = () => {
-  const socialLinks = [
-    {
-      name: 'Email',
-      icon: FaEnvelope,
-      href: 'mailto:snehasish.chakraborty@gmail.com',
-      label: 'snehasish.chakraborty@gmail.com',
-      description:
-        'Drop me a line and I promise to reply faster than my coffee gets cold!',
-    },
-    {
-      name: 'LinkedIn',
-      icon: FaLinkedin,
-      href: 'https://linkedin.com/in/snehasish-chakraborty',
-      label: 'linkedin.com/in/snehasish-chakraborty',
-      description:
-        'Connect with me professionally, or just to see what I look like in a suit!',
-    },
-    {
-      name: 'GitHub',
-      icon: FaGithub,
-      href: 'https://github.com/snehasish-chakraborty',
-      label: 'github.com/snehasish-chakraborty',
-      description:
-        'Check out my code – where bugs are just undocumented features!',
-    },
-    {
-      name: 'X',
-      icon: FaXTwitter,
-      href: 'https://x.com/snehasish_c',
-      label: '@snehasish_c',
-      description:
-        'Follow me for tech thoughts in 280 characters or less. No cat pictures, I promise!',
-    },
-  ];
-
   return (
     <Element name="contact" className="contact-section">
       <div className="section-container">
