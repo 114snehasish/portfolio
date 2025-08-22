@@ -18,7 +18,9 @@ const Main = () => {
           </p>
           <div className="big-text">
             <h1>Snehasish Chakraborty.</h1>
-            <h1 className="caption">I help team build products for the web.</h1>
+            <h1 className="caption">
+              Building mission-critical systems with technical excellence.
+            </h1>
           </div>
           <p className="self-description text-regular">
             {renderHighlightedText(selfDescriptionText)}
