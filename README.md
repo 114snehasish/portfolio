@@ -15,6 +15,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - [Prerequisites](#prerequisites)
 - [Local Development](#local-development)
 - [Project Structure](#project-structure)
+- [CV Generator](#cv-generator)
 - [Azure Deployment](#azure-deployment)
 - [GitHub Actions CI/CD](#github-actions-cicd)
 - [Customization Guide](#customization-guide)
@@ -212,6 +213,29 @@ portfolio/
 ├── vite.config.ts                  # Vite build configuration
 └── README.md                       # Project documentation
 ```
+
+## 📄 CV Generator
+
+This portfolio includes an automated CV/Resume generation system that creates professional PDF documents from HTML templates. The system uses Puppeteer to convert styled HTML into print-ready PDFs with proper page breaks and formatting.
+
+### Quick Start
+
+```bash
+# Generate PDF from HTML template
+npm run generate-cv
+```
+
+### Features
+
+- **Automated PDF Generation**: Convert HTML CV to professional PDF format
+- **Print-Optimized Styling**: Proper page breaks, margins, and print media queries
+- **Integrated Download**: CV automatically available through portfolio header
+- **Customizable Template**: Easy to modify HTML template with your information
+- **Professional Layout**: Consistent formatting across all pages
+
+### Documentation
+
+For detailed setup, customization options, and troubleshooting, see the comprehensive [CV Generator Documentation](./CV_GENERATOR.md).
 
 ## ☁️ Azure Deployment
 

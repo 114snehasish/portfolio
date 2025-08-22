@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snehasish Chakraborty - CV</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      :root {
+        --primary-color: #0a192f;
+        --background-color: #0a192f;
+        --secondary-color: #37e784;
+        --text-color: #ccd6f6;
+        --caption-color: #87bdf8;
+        --content-color: #8892b0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .cv-container {
+        background-color: var(--primary-color);
+        border: 1px solid rgba(55, 231, 132, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .header {
+        padding: 40px;
+        border-bottom: 1px solid rgba(55, 231, 132, 0.2);
+      }
+
+      .name {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: var(--text-color);
+      }
+
+      .title {
+        font-size: 20px;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--content-color);
+      }
+
+      .contact-item a {
+        color: var(--content-color);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-item a:hover {
+        color: var(--secondary-color);
+      }
+
+      .section {
+        padding: 30px 40px;
+        border-bottom: 1px solid rgba(55, 231, 132, 0.1);
+      }
+
+      .section-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--secondary-color);
+      }
+
+      .summary {
+        color: var(--content-color);
+        margin-bottom: 20px;
+      }
+
+      .experience-item,
+      .project-item {
+        margin-bottom: 25px;
+      }
+
+      .experience-title,
+      .project-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      .experience-company,
+      .project-period {
+        font-size: 16px;
+        color: var(--caption-color);
+        margin-bottom: 5px;
+      }
+
+      .experience-period {
+        font-size: 14px;
+        color: var(--content-color);
+        margin-bottom: 10px;
+      }
+
+      .experience-description,
+      .project-description {
+        color: var(--content-color);
+        margin-bottom: 10px;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .skill-category {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .skill-category-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--caption-color);
+        margin-bottom: 10px;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-tag {
+        background-color: rgba(55, 231, 132, 0.1);
+        color: var(--secondary-color);
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .education-item {
+        margin-bottom: 20px;
+      }
+
+      .education-degree {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+      }
+
+      .education-institution {
+        font-size: 16px;
+        color: var(--caption-color);
+      }
+
+      .education-period {
+        font-size: 14px;
+        color: var(--content-color);
+        margin-bottom: 5px;
+      }
+
+      @media print {
+        body {
+          padding: 40px;
+          background-color: var(--background-color);
+          margin: 0;
+        }
+
+        .cv-container {
+          border: none;
+          box-shadow: none;
+          padding: 0;
+        }
+
+        /* Remove default page margins and set background */
+        @page {
+          size: A4;
+          margin: 40px;
+          background-color: var(--background-color);
+        }
+
+        /* Ensure consistent padding within content */
+        .header, .section {
+          padding: 20px 0;
+        }
+
+        /* Add proper spacing at top of first page */
+        .header {
+          padding-top: 0;
+          margin-bottom: 20px;
+        }
+
+        .section:last-child {
+          padding-bottom: 0;
+        }
+
+        /* Allow sections to flow naturally - no forced page breaks */
+        .section {
+          page-break-before: auto;
+          break-before: auto;
+          page-break-inside: auto;
+          break-inside: auto;
+        }
+
+        /* Ensure section titles don't get orphaned but don't force page breaks */
+        .section-title {
+          page-break-after: avoid;
+          break-after: avoid;
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+
+        /* First section title should not have top margin */
+        .section:first-of-type .section-title {
+          margin-top: 0;
+        }
+
+        /* Force Technical Skills section to start on a new page */
+        .section:has(.section-title:contains("Technical Skills")),
+        .section:last-of-type {
+          page-break-before: always;
+          break-before: page;
+        }
+
+        /* Alternative approach - target the skills container section */
+        .section:nth-last-of-type(1) {
+          page-break-before: always;
+          break-before: page;
+        }
+
+        /* Make each experience item avoid page breaks within if possible */
+        .experience-item, .project-item {
+          page-break-inside: avoid;
+          break-inside: avoid;
+          margin-bottom: 20px;
+        }
+
+        /* Add proper spacing for content */
+        .experience-description, .project-description {
+          margin-top: 8px;
+          margin-bottom: 8px;
+        }
+
+        /* Handle content that breaks across pages with proper spacing */
+        p {
+          orphans: 2;
+          widows: 2;
+        }
+
+        /* Remove conflicting page margin rules */
+        .experience-item::after, .project-item::after {
+          content: "";
+          display: block;
+          height: 0;
+          visibility: hidden;
+        }
+
+        /* Ensure consistent spacing for elements */
+        .experience-description + .experience-description,
+        .project-description + .project-description {
+          margin-top: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <div class="header">
+        <h1 class="name">Snehasish Chakraborty</h1>
+        <h2 class="title">Full Stack Engineer | Cloud & DevOps Specialist</h2>
+        <p class="summary">
+          Experienced software engineer with 8+ years of expertise in Full Stack
+          development, Cloud technologies, and DevOps practices. Proven track
+          record of leading teams, architecting solutions, and delivering
+          enterprise-grade applications across Pharma, Travel, and Banking
+          industries.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span>📧</span>
+            <a href="mailto:114snehasish@gmail.com">114snehasish@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>🔗</span>
+            <a
+              href="https://www.linkedin.com/in/snehasish-chakraborty114"
+              target="_blank"
+              >linkedin.com/in/snehasish-chakraborty114</a
+            >
+          </div>
+          <div class="contact-item">
+            <span>💻</span>
+            <a href="https://github.com/114snehasish" target="_blank"
+              >github.com/114snehasish</a
+            >
+          </div>
+          <div class="contact-item">
+            <span>🌐</span>
+            <a href="https://www.snehasish-chakraborty.com" target="_blank"
+              >www.snehasish-chakraborty.com</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Professional Experience</h3>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Technical Squad Lead</h4>
+          <div class="experience-company">American Airlines @ Cognizant</div>
+          <div class="experience-period">February 2023 - Present</div>
+          <p class="experience-description">
+            Leading the design and development of a key application used by
+            pilots for managing their schedules. Responsibilities include
+            gathering requirements, planning work, creating technical solutions,
+            and guiding team members to meet business goals while maintaining
+            high code quality.
+          </p>
+          <p class="experience-description">
+            <strong>Key Achievements:</strong> Implemented Active-Active
+            architecture to enhance reliability and availability of
+            mission-critical system components. Orchestrated the transformation
+            of the product's network infrastructure to a Hub/Spoke topology,
+            significantly improving scalability and performance. Optimized
+            production support processes, resulting in enhanced system stability
+            and reduced incident resolution time.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Lead Developer</h4>
+          <div class="experience-company">Western Union @ Cognizant</div>
+          <div class="experience-period">January 2022 - February 2023</div>
+          <p class="experience-description">
+            Analyzed Low Level Design documents representing legacy Mainframe
+            systems, designed APIs to serve as interfaces and middleware for
+            multiple downstream systems, and implemented these APIs using Spring
+            Boot and AWS. Mentored junior developers and improved the overall
+            development process.
+          </p>
+          <p class="experience-description">
+            <strong>Key Achievements:</strong> Acquired hands-on experience with
+            various DevOps tools and AWS services. Successfully mentored junior
+            developers, resulting in improved team performance. Contributed to
+            the early completion of a major project, which received positive
+            feedback from stakeholders.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">AWS ECS</span>
+            <span class="skill-tag">AWS Fargate</span>
+            <span class="skill-tag">AWS Lambda</span>
+            <span class="skill-tag">Microservices</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Architect & Lead Developer</h4>
+          <div class="experience-company">
+            Johnson & Johnson @ Tata Consultancy Services
+          </div>
+          <div class="experience-period">February 2021 - December 2021</div>
+          <p class="experience-description">
+            Led the design and development of a new application managing
+            training data for medical scientists. Gathered requirements, created
+            architecture, and implemented solutions using Spring Boot and
+            Angular. Architected and developed the E22 Authentication flow using
+            Spring Security SAML and Keycloak.
+          </p>
+          <p class="experience-description">
+            <strong>Key Achievements:</strong> Engineered a robust end-to-end
+            authentication flow for both internal users via SSO and external
+            users through secure credential-based access. Successfully passed
+            comprehensive security audits with A+ ratings, demonstrating
+            exceptional security standards with zero vulnerabilities.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Keycloak</span>
+            <span class="skill-tag">Spring Security SAML</span>
+            <span class="skill-tag">AWS EC2</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Lead D2 Developer</h4>
+          <div class="experience-company">
+            Johnson & Johnson @ Tata Consultancy Services
+          </div>
+          <div class="experience-period">March 2020 - February 2021</div>
+          <p class="experience-description">
+            Involved in the design and development of essential components for
+            the D2 application, including Properties Page, D2 context, Auto
+            Naming and Auto Linking, and Lifecycle and Workflow policies.
+            Spearheaded the creation of D2 Plugins and led the development of
+            custom Spring Boot applications leveraging D2FS and DFC.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">D2</span>
+            <span class="skill-tag">D2FS</span>
+            <span class="skill-tag">OpenText LSR&D</span>
+            <span class="skill-tag">D2 Plugin</span>
+            <span class="skill-tag">Spring Boot</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Architect & Lead Developer</h4>
+          <div class="experience-company">
+            Johnson & Johnson @ Tata Consultancy Services
+          </div>
+          <div class="experience-period">February 2019 - February 2020</div>
+          <p class="experience-description">
+            Spearheaded comprehensive development projects, independently
+            mastering Spring Boot and leveraging its capabilities to architect
+            and deliver robust applications. Provided mentorship to freshers and
+            managed the creation of multiple applications tailored to distinct
+            technical requirements.
+          </p>
+          <p class="experience-description">
+            <strong>Key Achievements:</strong> Successfully delivered multiple
+            enterprise-grade products within a short timeframe with a lean team.
+            Introduced SAML SSO for the first time within the entire account,
+            establishing expertise in SAML implementations.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Spring Data JPA</span>
+            <span class="skill-tag">Spring Security SAML</span>
+            <span class="skill-tag">RBAC</span>
+            <span class="skill-tag">Mentorship</span>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <h4 class="experience-title">Java Developer and Support Associate</h4>
+          <div class="experience-company">
+            Johnson & Johnson @ Tata Consultancy Services
+          </div>
+          <div class="experience-period">April 2016 - February 2019</div>
+          <p class="experience-description">
+            Served as the primary production support and on-call associate,
+            addressing end user issues promptly. Proactively identified
+            operational bottlenecks and implemented innovative process
+            improvements. Designed and developed support automations that
+            streamlined incident management.
+          </p>
+          <p class="experience-description">
+            <strong>Key Achievements:</strong> Support automations delivered
+            measurable efficiency gains, saving more than 100% of Full-Time
+            Equivalent (FTE) effort across the portfolio. Early engagement with
+            process and product improvements led to a broader role as a subject
+            matter expert.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">DFC</span>
+            <span class="skill-tag">Documentum</span>
+            <span class="skill-tag">Automation</span>
+            <span class="skill-tag">Production Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Notable Projects</h3>
+
+        <div class="project-item">
+          <h4 class="project-title">Portfolio Website v2</h4>
+          <div class="project-period">April 2024 - June 2025</div>
+          <p class="project-description">
+            Developed a modern, responsive portfolio website utilizing React and
+            TailwindCSS. Implemented infrastructure as code principles with
+            Terraform for Azure deployment. Established a robust CI/CD pipeline
+            using GitHub Actions for automated testing and deployment.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">TailwindCSS</span>
+            <span class="skill-tag">Azure Static App Service</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h4 class="project-title">Homelab</h4>
+          <div class="project-period">January 2025 - Present</div>
+          <p class="project-description">
+            Designing and implementing a comprehensive homelab environment for
+            experimenting with enterprise-grade technologies. Establishing
+            infrastructure as code practices using Terraform, containerization
+            with Docker and Portainer, identity management via Keycloak, and DNS
+            services with Bind9.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Virtual Machine</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Keycloak</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h4 class="project-title">Spring Client Resolver Library</h4>
+          <div class="project-period">February 2023 - April 2023</div>
+          <p class="project-description">
+            Created a Spring Boot library that can detect Client Information
+            calling an endpoint, providing valuable insights for API monitoring
+            and security. The library was designed with an architecture that
+            allows for easy extension, making it accessible for anyone willing
+            to contribute.
+          </p>
+          <div class="skills-list">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Maven Central</span>
+            <span class="skill-tag">API Development</span>
+            <span class="skill-tag">Open Source</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Technical Skills</h3>
+
+        <div class="skills-container">
+          <div class="skill-category">
+            <h4 class="skill-category-title">Languages</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">HCL</span>
+              <span class="skill-tag">C#</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Frameworks & Libraries</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Angular</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Spring Security</span>
+              <span class="skill-tag">Spring Data</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Cloud & DevOps</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Keycloak</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Tools & Platforms</h4>
+            <div class="skills-list">
+              <span class="skill-tag">IntelliJ IDEA</span>
+              <span class="skill-tag">WebStorm</span>
+              <span class="skill-tag">Rider</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Operating Systems</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Windows</span>
+              <span class="skill-tag">MacOS</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Soft Skills</h4>
+            <div class="skills-list">
+              <span class="skill-tag">Team Leadership</span>
+              <span class="skill-tag">Mentorship</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Process Improvement</span>
+              <span class="skill-tag">Technical Writing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

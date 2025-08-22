@@ -7,6 +7,7 @@ import {
   FaSteam,
   FaXbox,
   FaXTwitter,
+  FaFilePdf,
 } from 'react-icons/fa6';
 
 // Define interface for contact social links
@@ -20,6 +21,14 @@ export interface SocialLink {
 
 // Create data array with all social links
 export const socialLinks: SocialLink[] = [
+  {
+    name: 'CV',
+    icon: FaFilePdf,
+    href: '/Snehasish_Chakraborty_CV.pdf',
+    label: 'Download CV',
+    description:
+      'Get a copy of my CV to learn more about my professional experience and skills!',
+  },
   {
     name: 'Email',
     icon: FaEnvelope,

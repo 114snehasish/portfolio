@@ -45,13 +45,17 @@ export default function Header() {
   const renderButton = (item: NavItem) => {
     return (
       <div className="nav-item" key={item.to}>
-        <button
+        <a
+          href={item.to}
+          download="Snehasish_Chakraborty_CV.pdf"
           className="cta-button"
-          onClick={() => (window.location.href = item.to)}
+          title="Download CV"
+          role="button"
+          aria-label={`Download ${item.label}`}
         >
           <span>{item.label}</span>
           <item.icon />
-        </button>
+        </a>
         <span className="nav-tooltip">{item.label}</span>
       </div>
     );
