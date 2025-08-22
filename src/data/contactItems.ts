@@ -27,7 +27,7 @@ export const socialLinks: SocialLink[] = [
     href: '/Snehasish_Chakraborty_CV.pdf',
     label: 'Download CV',
     description:
-      'Get a copy of my CV to learn more about my professional experience and skills!',
+      'Grab my CV - where I make debugging sound heroic and coffee breaks look strategic!',
   },
   {
     name: 'Email',

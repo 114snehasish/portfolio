@@ -1,0 +1,12 @@
+/* Footer Section */
+.footer {
+  @apply bg-primary py-8;
+}
+
+.footer-content {
+  @apply w-[85%] max-w-[1400px] mx-auto px-4 text-center;
+}
+
+.footer-text {
+  @apply text-content text-sm;
+}
