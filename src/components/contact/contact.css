@@ -8,11 +8,11 @@
 }
 
 .contact-subtitle {
-  @apply text-base text-content max-w-4xl text-left mb-12 sm:mb-8;
+  @apply text-base text-content text-left mb-12 sm:mb-8;
 }
 
 .contact-content {
-  @apply flex flex-col gap-12 lg:gap-8 mt-8 max-w-4xl w-full;
+  @apply flex flex-col gap-12 lg:gap-8 mt-8 w-full;
 }
 
 /* Contact Info */
