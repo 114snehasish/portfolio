@@ -13,7 +13,8 @@ export default defineConfig({
       '@components': '/src/components',
       '@data': '/src/data',
       '@assets': '/src/assets',
-      '@styles': '/src/styles'
+      '@styles': '/src/styles',
+      '@utils': '/src/utils'
     }
   }
 });
