@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <p className="footer-text">
-          © {currentYear} Snehasish Chakraborty - Built with 💗 using React
+          © {currentYear} Snehasish Chakraborty - Built with <span aria-label="love" role="img">💗</span> using React
         </p>
       </div>
     </footer>
