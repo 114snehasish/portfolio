@@ -1,9 +1,13 @@
 import './main.css';
 import { Link } from 'react-scroll';
 import { FaTerminal } from 'react-icons/fa6';
+import { renderHighlightedText } from '@utils/textHighlighter';
 
 const Main = () => {
   const yearsOfExperience = getYearsOfExperience();
+
+  // Self-description text with highlighting syntax
+  const selfDescriptionText = `I am a software engineer having $${yearsOfExperience}$ years of experience specializing in $Full Stack$, $Cloud$ and $DevOps$. I also have experience in different ECM Technologies like $Documentum$ and $D2$. I have been into serving clients from different business domains such as $Pharma$, $Travel$ and $Banking$.`;
 
   return (
     <main className="main">
@@ -17,19 +21,7 @@ const Main = () => {
             <h1 className="caption">I help team build products for the web.</h1>
           </div>
           <p className="self-description text-regular">
-            I am a software engineer having{' '}
-            <span className="text-secondary">{yearsOfExperience}</span> years of
-            experience specializing in{' '}
-            <span className="text-secondary">Full Stack</span>,{' '}
-            <span className="text-secondary">Cloud</span> and{' '}
-            <span className="text-secondary">DevOps</span>. I also have
-            experience in different ECM Technologies like{' '}
-            <span className="text-secondary">Documentum</span> and{' '}
-            <span className="text-secondary">D2</span>. I have been into serving
-            clients from different business domains such as{' '}
-            <span className="text-secondary">Pharma</span>,{' '}
-            <span className="text-secondary">Travel</span> and{' '}
-            <span className="text-secondary">Banking</span>.
+            {renderHighlightedText(selfDescriptionText)}
           </p>
           <Link
             to="about"

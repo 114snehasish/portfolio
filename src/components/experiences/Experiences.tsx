@@ -2,6 +2,7 @@ import './experiences.css';
 import { Element } from 'react-scroll';
 import { ExperienceItem, experienceItems } from '@data/experiencesItems';
 import { FaGithub, FaLink } from 'react-icons/fa6';
+import { renderHighlightedText } from '@utils/textHighlighter';
 
 // Type guard function to check if experience is Personal type
 const isPersonalExperience = (
@@ -82,7 +83,7 @@ const Experiences = () => {
                     Roles & Responsibilities
                   </h4>
                   <p className="experience-description">
-                    {experience.rolesAndResponsibilities}
+                    {renderHighlightedText(experience.rolesAndResponsibilities)}
                   </p>
                 </div>
               )}
@@ -90,7 +91,7 @@ const Experiences = () => {
               <div className="experience-section">
                 <h4 className="experience-section-title">Key Outcomes</h4>
                 <p className="experience-description">
-                  {experience.keyOutcomes}
+                  {renderHighlightedText(experience.keyOutcomes)}
                 </p>
               </div>
 
