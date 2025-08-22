@@ -29,7 +29,7 @@ export const navItems: NavItem[] = [
   { to: 'article', label: '_articles', type: 'link', icon: FaNewspaper },
   { to: 'contact', label: '_contact', type: 'link', icon: FaEnvelope },
   {
-    to: '/resume.pdf', // This needs special handling as it's not a scroll target
+    to: 'Snehasish_Chakraborty_CV.pdf', // Updated to correct CV file path
     label: '/resume',
     type: 'button',
     icon: FaFile,
