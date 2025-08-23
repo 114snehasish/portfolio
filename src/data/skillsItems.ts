@@ -21,7 +21,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'The Nine to Fives',
     icon: MdOutlineComputer,
     description:
-      'Wrangling code during business hours, I turn caffeine into enterprise-ready apps—delivering ' +
+      'Wrangling code during business hours, I turn caffeine into enterprise-ready apps — delivering ' +
       'solutions before the clock strikes five. Occasionally, the clock and I disagree on when five actually is.',
     skills: [
       'Angular',
@@ -75,7 +75,7 @@ export const skillCategories: SkillCategory[] = [
     title: 'The Polyglot of SiliconLand',
     icon: MdTranslate,
     description:
-      'Comfortable with many programming languages—and ready for the day when English itself becomes ' +
+      'Comfortable with many programming languages — and ready for the day when English itself becomes ' +
       'the ultimate coding language (heaven help my spellcheck).',
     skills: ['Java', 'JavaScript', 'TypeScript', 'HCL', 'C#'],
   },

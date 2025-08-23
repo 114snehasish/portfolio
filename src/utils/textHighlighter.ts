@@ -3,7 +3,8 @@ import React, { ReactNode } from 'react';
 /**
  * Utility function to render text with highlighted sections
  * Parses text with $highlighted$ syntax and returns an array of ReactNodes
- * where highlighted sections are wrapped in spans with text-secondary class
+ * where highlighted sections are wrapped in spans with text-secondary class.
+ * The logic assumes that the text does not start with a highlighted text
  *
  * @param text - The text string containing $highlight$ syntax
  * @returns Array of ReactNodes with highlighted sections

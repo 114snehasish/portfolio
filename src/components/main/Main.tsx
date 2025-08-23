@@ -7,7 +7,7 @@ const Main = () => {
   const yearsOfExperience = getYearsOfExperience();
 
   // Self-description text with highlighting syntax
-  const selfDescriptionText = `I am a software engineer having $${yearsOfExperience}$ years of experience specializing in $Full Stack$, $Cloud$ and $DevOps$. I also have experience in different ECM Technologies like $Documentum$ and $D2$. I have been into serving clients from different business domains such as $Pharma$, $Travel$ and $Banking$.`;
+  const selfDescriptionText = `I'm a passionate $Technical Squad Lead$ with $${yearsOfExperience}$ years of expertise in $Full Stack Development$, $Cloud Architecture$, and $DevOps Practices$. I've successfully delivered enterprise-grade solutions across critical business domains including $Pharmaceutical Research$, $Airline Operations$, and $Global Money Transfer$, while also bringing deep knowledge of $Enterprise Content Management$ technologies like $Documentum$ and $D2$.`;
 
   return (
     <main className="main">
@@ -19,7 +19,8 @@ const Main = () => {
           <div className="big-text">
             <h1>Snehasish Chakraborty.</h1>
             <h1 className="caption">
-              Building mission-critical systems with technical excellence.
+              Building systems that cure bugs, navigate clouds, and move
+              millions.
             </h1>
           </div>
           <p className="self-description text-regular">
