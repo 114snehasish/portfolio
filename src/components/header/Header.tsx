@@ -63,16 +63,11 @@ export default function Header() {
 
   return (
     <header>
-      <div className="header-container">
-        <div className="logo-container">
-          <img src="/icon.svg" alt="SC" className="logo-icon" />
-        </div>
-        <nav className="nav">
-          {navItems.map((item, index) =>
-            item.type === 'link' ? renderLink(item, index) : renderButton(item)
-          )}
-        </nav>
-      </div>
+      <nav className="nav p-6">
+        {navItems.map((item, index) =>
+          item.type === 'link' ? renderLink(item, index) : renderButton(item)
+        )}
+      </nav>
     </header>
   );
 }
