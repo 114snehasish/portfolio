@@ -16,6 +16,7 @@ export interface SocialLink {
   icon: IconType;
   href: string;
   label: string;
+  shortLabel?: string; // Optional shorter version for mobile screens
   description: string;
 }
 
@@ -34,6 +35,7 @@ export const socialLinks: SocialLink[] = [
     icon: FaEnvelope,
     href: 'mailto:114snehasish@gmail.com',
     label: '114snehasish@gmail.com',
+    shortLabel: 'Email',
     description:
       'Drop me a line and I promise to reply faster than my coffee gets cold!',
   },
@@ -42,6 +44,7 @@ export const socialLinks: SocialLink[] = [
     icon: FaLinkedin,
     href: 'https://www.linkedin.com/in/snehasish-chakraborty114',
     label: 'linkedin.com/in/snehasish-chakraborty',
+    shortLabel: 'LinkedIn',
     description:
       'Connect with me professionally, or just to see what I look like in a suit!',
   },
@@ -50,6 +53,7 @@ export const socialLinks: SocialLink[] = [
     icon: FaGithub,
     href: 'https://github.com/114snehasish',
     label: 'github.com/114snehasish',
+    shortLabel: 'GitHub',
     description:
       'Check out my code – where bugs are just undocumented features!',
   },

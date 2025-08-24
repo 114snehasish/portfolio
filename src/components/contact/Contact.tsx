@@ -28,7 +28,18 @@ const Contact = () => {
                   <div className="social-link-content">
                     <div className="social-link-header">
                       <link.icon className="social-icon" />
-                      <span className="social-label">{link.label}</span>
+                      {link.shortLabel ? (
+                        <>
+                          <span className="social-label social-label-full">
+                            {link.label}
+                          </span>
+                          <span className="social-label social-label-short">
+                            {link.shortLabel}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="social-label">{link.label}</span>
+                      )}
                     </div>
                     <p className="social-description">{link.description}</p>
                   </div>
