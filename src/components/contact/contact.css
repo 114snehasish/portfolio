@@ -45,6 +45,14 @@
   @apply text-content font-medium;
 }
 
+.social-label-full {
+  @apply hidden sm:inline;
+}
+
+.social-label-short {
+  @apply inline sm:hidden;
+}
+
 .social-description {
   @apply text-content text-sm opacity-80 pl-9 sm:pl-7 mt-1;
 }
