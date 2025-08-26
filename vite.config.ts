@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { imageOptimization } from './plugins/image-optimization.js';
+import { imageOptimization } from './plugins/image-optimization';
 
 // https://vitejs.dev/config/
 export default defineConfig({
