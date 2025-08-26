@@ -47,11 +47,11 @@ export function imageOptimization(): Plugin {
         const outputDir = dirname(fileName);
         
         try {
-          // Create SEO version (1200x630 JPG) - Smart crop for social media
+          // Create SEO version (1200x630 JPG) - Crop from top to show face
           const seoBuffer = await sharp(originalBuffer)
             .resize(1200, 630, { 
               fit: 'cover', 
-              position: 'center'  // This ensures we get the center part of the image
+              position: 'top'  // This ensures we get the top part of the image (face visible)
             })
             .jpeg({ quality: 85 })
             .toBuffer();
