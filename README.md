@@ -1,6 +1,14 @@
 # 🚀 Modern Portfolio Website
 
-> *"Just because you're building your digital presence, doesn't mean you have to start from scratch... unless you're into that sort of masochistic coding adventure!"* 😄
+> *"Just because you're building your digital presence, doesn't mean you have to start from scratch... unless you're into that sort of masochisti## 📚 Documentation
+
+Additional documentation available in the `docs/` folder:
+
+- [📋 **CV Generator**](docs/CV_GENERATOR.md) - How to generate and customize your PDF resume
+- [🖼️ **Image Optimization**](docs/IMAGE_OPTIMIZATION.md) - Image processing and performance
+- [🔍 **SEO Configuration**](docs/SEO_CONFIG.md) - Search engine optimization setup
+- [🏗️ **Architecture Guide**](docs/ARCHITECTURE.md) - Technical architecture and project structure
+- [🔄 **CI/CD Guide**](docs/CICD.md) - Continuous integration and deploymentg adventure!"* 😄
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
@@ -64,7 +72,7 @@ The structure is **component-based** - each portfolio section is self-contained,
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/114snehasish/portfolio.git
 cd portfolio
 
 # Install dependencies
@@ -510,13 +518,11 @@ For complete CI/CD setup instructions, see [📖 CI/CD Guide](docs/CICD.md).
 
 Comprehensive documentation is available in the `docs/` folder:
 
-- [📖 **CV Generator**](docs/CV_GENERATOR.md) - Automated PDF resume generation
+- [� **CV Generator**](docs/CV_GENERATOR.md) - Automated PDF resume generation
 - [🖼️ **Image Optimization**](docs/IMAGE_OPTIMIZATION.md) - Performance and SEO image handling
 - [🔍 **SEO Configuration**](docs/SEO_CONFIG.md) - Search engine optimization setup
-- [☁️ **Deployment Guide**](docs/DEPLOYMENT.md) - Azure deployment instructions
-- [🔄 **CI/CD Setup**](docs/CICD.md) - Continuous integration and deployment
-- [🎨 **Customization**](docs/CUSTOMIZATION.md) - Advanced customization options
-- [🏗️ **Architecture**](docs/ARCHITECTURE.md) - Technical architecture overview
+- [🏗️ **Architecture Guide**](docs/ARCHITECTURE.md) - Technical architecture and project structure
+- [🔄 **CI/CD Guide**](docs/CICD.md) - Continuous integration and deployment
 
 ## � License & Attribution
 

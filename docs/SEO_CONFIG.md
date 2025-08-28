@@ -18,7 +18,7 @@ Your portfolio is already SEO-optimized with these files:
 - **Points to**: Your sitemap location
 
 ### 🗺️ **Sitemap** (`public/sitemap.xml`)
-- **Main page**: https://snehasish-chakraborty.com/
+- **Main page**: https://<YOUR_DOMAIN>/
 - **CV PDF**: Your downloadable resume
 - **Updates**: Monthly for main page, yearly for CV
 
