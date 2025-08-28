@@ -22,7 +22,7 @@ npm run generate-cv
 
 ## Full Documentation
 
-For complete setup instructions, customization options, and troubleshooting, see the [CV Generator Documentation](../CV_GENERATOR.md) in the project root.
+For complete setup instructions, customization options, and troubleshooting, see the [CV Generator Documentation](../docs/CV_GENERATOR.md) in the project root.
 
 ## Color Scheme
 
