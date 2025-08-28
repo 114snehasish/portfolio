@@ -14,6 +14,7 @@ Additional documentation available in the `docs/` folder:
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC.svg)](https://tailwindcss.com/)
+[![Azure Static Web Apps CI/CD](https://github.com/114snehasish/portfolio/actions/workflows/azure-static-web-apps.yml/badge.svg)](https://github.com/114snehasish/portfolio/actions/workflows/azure-static-web-apps.yml)
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Perfect for developers looking to showcase their work with a clean, professional design.
 
