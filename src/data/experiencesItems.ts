@@ -81,7 +81,7 @@ export const experienceItems: ExperienceItem[] = [
       'Bind9',
     ],
     type: 'Personal',
-    githubUrl: 'https://github.com/114snehasish/homelab-azure',
+    githubUrl: 'https://github.com/114snehasish/portfolio.git',
   },
   {
     id: 3,
