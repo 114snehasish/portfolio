@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Allow search engines to access CSS, JS, and image files
+Allow: /assets/
+Allow: /src/assets/
+Allow: *.css
+Allow: *.js
+Allow: *.svg
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.pdf
+
+# Sitemap location
+Sitemap: https://snehasish-chakraborty.com/sitemap.xml

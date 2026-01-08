@@ -34,7 +34,16 @@
   @apply relative overflow-hidden rounded-lg cursor-pointer;
 }
 
-.profile-image {
+.profile-image,
+.image-container picture {
+  @apply w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out;
+}
+
+.image-container picture {
+  @apply block;
+}
+
+.image-container img {
   @apply w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out;
 }
 
@@ -42,7 +51,8 @@
   @apply absolute inset-0 bg-secondary opacity-0 transition-opacity duration-300 ease-in-out;
 }
 
-.image-container:hover .profile-image {
+.image-container:hover .profile-image,
+.image-container:hover img {
   @apply scale-105;
 }
 
