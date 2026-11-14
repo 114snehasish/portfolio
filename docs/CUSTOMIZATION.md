@@ -306,6 +306,14 @@ export const contactItems: ContactItem[] = [
 
 ### 🌈 Color Scheme
 
+> **This project's colours are CSS variables.** The live palette is defined as
+> space-separated RGB channels in `src/index.css` (`--primary-rgb: 10 25 47;`,
+> `--secondary-rgb`, `--text-rgb`, `--caption-rgb`, `--content-rgb`) and mapped in
+> `tailwind.config.js` as `'rgb(var(--secondary-rgb) / <alpha-value>)'`. Keep that
+> form for any colour you add, otherwise `bg-opacity-*`, `border-opacity-*` and
+> `text-opacity-*` will silently do nothing. The scales below are a general
+> illustration of a larger palette.
+
 Update your brand colors in `tailwind.config.js`:
 
 ```javascript
@@ -390,7 +398,7 @@ Customize fonts in `src/index.css`:
 
 ```css
 /* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@300..700&display=swap');
 
 :root {
   /* Typography Scale */

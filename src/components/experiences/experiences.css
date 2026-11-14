@@ -87,5 +87,5 @@
 }
 
 .experience-type-badge-personal {
-  @apply bg-secondary bg-opacity-40 border-r-2 border-b-2 border-secondary border-opacity-20;
+  @apply bg-secondary bg-opacity-40 text-white border-r-2 border-b-2 border-secondary border-opacity-20;
 }

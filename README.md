@@ -133,20 +133,23 @@ export const experienceItems = [
 
 ### 🎨 Visual Customization
 
-Update colors in `tailwind.config.js`:
+Colours are CSS variables in `src/index.css`. Set each one as space-separated
+RGB channels (no commas) so Tailwind's opacity utilities such as
+`bg-opacity-80` and `border-opacity-10` keep working:
 
-```javascript
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#your-brand-color',
-        secondary: '#your-secondary-color',
-      }
-    }
-  }
-};
+```css
+/* src/index.css */
+:root {
+  --primary-rgb: 10 25 47;     /* your brand colour, as R G B */
+  --secondary-rgb: 55 231 132; /* your accent colour, as R G B */
+}
 ```
+
+`tailwind.config.js` maps these to the `primary`, `secondary`, `content`,
+`caption` and `background` colour names (for example
+`secondary: 'rgb(var(--secondary-rgb) / <alpha-value>)'`), and the
+`--*-color` variables are derived from them, so you normally only edit the
+`--*-rgb` values.
 
 ### 🖼️ Images
 
@@ -408,19 +411,24 @@ export const aboutItems: AboutItem[] = [
 ```
 
 #### 2. **Visual Customization**
-Update colors and fonts in `tailwind.config.js`:
-```javascript
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#your-brand-color',
-        secondary: '#your-secondary-color',
-      }
-    }
-  }
-};
+Colours are CSS variables in `src/index.css`. Set each one as space-separated
+RGB channels (no commas) so Tailwind's opacity utilities such as
+`bg-opacity-80` and `border-opacity-10` keep working:
+
+```css
+/* src/index.css */
+:root {
+  --primary-rgb: 10 25 47;     /* your brand colour, as R G B */
+  --secondary-rgb: 55 231 132; /* your accent colour, as R G B */
+}
 ```
+
+`tailwind.config.js` maps these to the `primary`, `secondary`, `content`,
+`caption` and `background` colour names (for example
+`secondary: 'rgb(var(--secondary-rgb) / <alpha-value>)'`), and the
+`--*-color` variables are derived from them, so you normally only edit the
+`--*-rgb` values. Fonts are loaded by the Google Fonts `@import` at the top of
+`src/index.css`; add any new family there as well as in `tailwind.config.js`.
 
 #### 3. **Component Structure**
 Each section is modular - modify `src/components/[section]/` to change layout or functionality.
