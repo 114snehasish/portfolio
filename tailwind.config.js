@@ -6,16 +6,13 @@ export default {
       spacing: {
         'button-padding': 'var(--spacing-unit)',
       },
-      borderColor: {
-        secondary: 'var(--secondary-color)',
-      },
       colors: {
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-        'content-default': 'var(--text-color)',
-        content: 'var(--content-color)',
-        caption: 'var(--caption-color)',
-        background: 'var(--background-color)',
+        primary: 'rgb(var(--primary-rgb) / <alpha-value>)',
+        secondary: 'rgb(var(--secondary-rgb) / <alpha-value>)',
+        'content-default': 'rgb(var(--text-rgb) / <alpha-value>)',
+        content: 'rgb(var(--content-rgb) / <alpha-value>)',
+        caption: 'rgb(var(--caption-rgb) / <alpha-value>)',
+        background: 'rgb(var(--primary-rgb) / <alpha-value>)',
         'background-transparent': 'var(--background-transparent)',
       },
       boxShadow: {
